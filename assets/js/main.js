@@ -135,4 +135,33 @@
 
   window.addEventListener("load", initSwiper);
 
+  /**
+   * Hero Video Cycling
+   */
+  function initHeroVideoCycling() {
+    const heroVideos = document.querySelectorAll('.hero-video');
+    if (heroVideos.length === 0) return;
+
+    let currentVideoIndex = 0;
+    const videoDuration = 8000; // 8 seconds per video
+
+    function showNextVideo() {
+      // Remove active class from current video
+      heroVideos[currentVideoIndex].classList.remove('active');
+      
+      // Move to next video
+      currentVideoIndex = (currentVideoIndex + 1) % heroVideos.length;
+      
+      // Add active class to next video
+      heroVideos[currentVideoIndex].classList.add('active');
+    }
+
+    // Start cycling after a delay to let the first video play
+    setTimeout(() => {
+      setInterval(showNextVideo, videoDuration);
+    }, videoDuration);
+  }
+
+  window.addEventListener("load", initHeroVideoCycling);
+
 })();
