@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Sürme İzolasyon Yalıtım Galerisi - Gezgin Ustalar</title>
+  <meta name="description" content="Sürme izolasyon yalıtım işlerimizin profesyonel galerisi. Su yalıtımı, sızdırmazlık ve izolasyon uygulamalarımızı keşfedin.">
+  <meta name="keywords" content="sürme izolasyon, yalıtım, su yalıtımı, sızdırmazlık, izolasyon galerisi">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Gallery Custom CSS -->
+  <style>
+    .gallery-hero {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      padding: 120px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gallery-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.05"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.05"/><circle cx="50" cy="10" r="0.5" fill="%23ffffff" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      opacity: 0.3;
+    }
+
+    .gallery-hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .gallery-title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .gallery-subtitle {
+      font-size: 1.25rem;
+      color: #e0e0e0;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .gallery-breadcrumb {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 50px;
+      padding: 12px 24px;
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
+
+    .gallery-breadcrumb a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .gallery-breadcrumb .separator {
+      margin: 0 12px;
+      color: #cccccc;
+    }
+
+    .gallery-section {
+      padding: 80px 0;
+      background: #f8f9fa;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      background: #ffffff;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-overlay-content {
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .gallery-overlay-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    .gallery-overlay-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .gallery-overlay-desc {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .gallery-info {
+      padding: 25px;
+    }
+
+    .gallery-item-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+    }
+
+    .gallery-item-desc {
+      color: #6c757d;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .gallery-stats {
+      background: #ffffff;
+      padding: 60px 0;
+      border-top: 1px solid #e9ecef;
+    }
+
+    .stat-card {
+      text-align: center;
+      padding: 30px 20px;
+      border-radius: 15px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      color: #6c757d;
+      font-weight: 500;
+    }
+
+    .gallery-cta {
+      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+      padding: 80px 0;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .gallery-cta h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .gallery-cta p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    .btn-gallery {
+      background: linear-gradient(45deg, #3498db, #2980b9);
+      border: none;
+      padding: 15px 35px;
+      border-radius: 50px;
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    }
+
+    .btn-gallery:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+      color: #ffffff;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    .section-title p {
+      font-size: 1.1rem;
+      color: #6c757d;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .gallery-title {
+        font-size: 2.5rem;
+      }
+      
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .gallery-item img {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+
+<body class="gallery-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">Gezgin Ustalar</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="about.html">Hakkımızda</a></li>
+          <li><a href="services.html">Hizmetler</a></li>
+          <li><a href="projects.html">Projeler</a></li>
+          <li><a href="gallery.html" class="active">Galeri</a></li>
+          <li><a href="contact.html">İletişim</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted d-none d-sm-block" href="https://wa.me/905551234567?text=Usta%20Çağır" target="_blank">WhatsApp</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Gallery Hero Section -->
+    <section class="gallery-hero">
+      <div class="container">
+        <div class="gallery-hero-content text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="gallery-breadcrumb" data-aos="fade-up" data-aos-delay="150">
+            <a href="index.html">Ana Sayfa</a>
+            <span class="separator">/</span>
+            <a href="services.html">Hizmetler</a>
+            <span class="separator">/</span>
+            <span>Sürme İzolasyon Yalıtım</span>
+          </div>
+          
+          <h1 class="gallery-title" data-aos="fade-up" data-aos-delay="200">
+            Sürme İzolasyon Yalıtım
+          </h1>
+          
+          <p class="gallery-subtitle" data-aos="fade-up" data-aos-delay="250">
+            Profesyonel su yalıtımı ve sızdırmazlık uygulamalarımızın detaylı galerisi. 
+            Her projede kalite ve güvenilirlik standartlarımızı görün.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+      <div class="container">
+        
+        <div class="section-title" data-aos="fade-up">
+          <h2>İşlerimizden Örnekler</h2>
+          <p>Sürme izolasyon yalıtım uygulamalarımızın profesyonel fotoğrafları</p>
+        </div>
+
+        <div class="gallery-grid">
+          
+          <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+            <img src="static/WhatsApp Image 2025-10-11 at 1.56.21 PM (1).jpeg" alt="Sürme İzolasyon Uygulaması 1" class="img-fluid">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <div class="gallery-overlay-icon">
+                  <i class="bi bi-zoom-in"></i>
+                </div>
+                <div class="gallery-overlay-title">Detaylı Görünüm</div>
+                <div class="gallery-overlay-desc">Profesyonel uygulama</div>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3 class="gallery-item-title">Temel İzolasyon Uygulaması</h3>
+              <p class="gallery-item-desc">Beton yapılarda su yalıtımı için özel sürme izolasyon malzemesi uygulaması. Kaliteli malzeme ve uzman işçilik.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+            <img src="static/WhatsApp Image 2025-10-11 at 1.56.21 PM (2).jpeg" alt="Sürme İzolasyon Uygulaması 2" class="img-fluid">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <div class="gallery-overlay-icon">
+                  <i class="bi bi-zoom-in"></i>
+                </div>
+                <div class="gallery-overlay-title">Detaylı Görünüm</div>
+                <div class="gallery-overlay-desc">Profesyonel uygulama</div>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3 class="gallery-item-title">Yüzey Hazırlığı ve Uygulama</h3>
+              <p class="gallery-item-desc">Yüzey hazırlığından sonra dikkatli ve titiz bir şekilde sürme izolasyon malzemesi uygulanması.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+            <img src="static/WhatsApp Image 2025-10-11 at 1.56.21 PM (3).jpeg" alt="Sürme İzolasyon Uygulaması 3" class="img-fluid">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <div class="gallery-overlay-icon">
+                  <i class="bi bi-zoom-in"></i>
+                </div>
+                <div class="gallery-overlay-title">Detaylı Görünüm</div>
+                <div class="gallery-overlay-desc">Profesyonel uygulama</div>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3 class="gallery-item-title">Balkon ve Teras İzolasyonu</h3>
+              <p class="gallery-item-desc">Balkon ve teras alanlarında su sızıntısını önlemek için özel sürme izolasyon uygulaması.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+            <img src="static/WhatsApp Image 2025-10-11 at 1.56.21 PM (4).jpeg" alt="Sürme İzolasyon Uygulaması 4" class="img-fluid">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <div class="gallery-overlay-icon">
+                  <i class="bi bi-zoom-in"></i>
+                </div>
+                <div class="gallery-overlay-title">Detaylı Görünüm</div>
+                <div class="gallery-overlay-desc">Profesyonel uygulama</div>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3 class="gallery-item-title">Çatı İzolasyon Uygulaması</h3>
+              <p class="gallery-item-desc">Çatı yüzeylerinde su yalıtımı için sürme izolasyon malzemesi ile profesyonel uygulama.</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-aos="fade-up" data-aos-delay="500">
+            <img src="static/WhatsApp Image 2025-10-11 at 1.56.21 PM.jpeg" alt="Sürme İzolasyon Uygulaması 5" class="img-fluid">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <div class="gallery-overlay-icon">
+                  <i class="bi bi-zoom-in"></i>
+                </div>
+                <div class="gallery-overlay-title">Detaylı Görünüm</div>
+                <div class="gallery-overlay-desc">Profesyonel uygulama</div>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <h3 class="gallery-item-title">Genel İzolasyon Çalışması</h3>
+              <p class="gallery-item-desc">Çeşitli yapı elemanlarında sürme izolasyon uygulaması ile su yalıtımı sağlanması.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Stats Section -->
+    <section class="gallery-stats">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="stat-card">
+              <div class="stat-number">75+</div>
+              <div class="stat-label">Tamamlanan İzolasyon Projesi</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-card">
+              <div class="stat-number">13+</div>
+              <div class="stat-label">Yıl Deneyim</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat-card">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Müşteri Memnuniyeti</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="stat-card">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Teknik Destek</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery CTA Section -->
+    <section class="gallery-cta">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 data-aos="fade-up" data-aos-delay="100">İzolasyon İhtiyaçlarınız İçin Hemen İletişime Geçin</h2>
+            <p data-aos="fade-up" data-aos-delay="200">Profesyonel sürme izolasyon yalıtım hizmetlerimizle yapınızı koruyun. Ücretsiz keşif ve teklif için hemen arayın.</p>
+            <div data-aos="fade-up" data-aos-delay="300">
+              <a href="https://wa.me/905551234567?text=Sürme%20İzolasyon%20Hizmeti" class="btn-gallery" target="_blank">
+                <i class="bi bi-whatsapp me-2"></i>
+                WhatsApp ile İletişime Geç
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <div class="row gy-5">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <a href="index.html" class="logo d-flex align-items-center mb-3">
+              <span class="sitename">Gezgin Ustalar</span>
+            </a>
+            <p class="tagline">Ustalar yolda, çözüm kapında! Hızlı hizmet, garantili işçilik, uygun fiyat tek adreste.</p>
+            <div class="social-links mt-4">
+              <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="footer-links-grid">
+            <div class="row">
+              <div class="col-6 col-md-4">
+                <h5>Şirket</h5>
+                <ul class="list-unstyled">
+                  <li><a href="about.html">Hakkımızda</a></li>
+                  <li><a href="services.html">Hizmetler</a></li>
+                  <li><a href="projects.html">Projeler</a></li>
+                  <li><a href="gallery.html">Galeri</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-4">
+                <h5>Hizmetler</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#">Dış Cephe Kaplama</a></li>
+                  <li><a href="#">İç Mekan Tadilat</a></li>
+                  <li><a href="#">İzolasyon & Yalıtım</a></li>
+                  <li><a href="#">Karot Delme</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-4">
+                <h5>Destek</h5>
+                <ul class="list-unstyled">
+                  <li><a href="contact.html">İletişim</a></li>
+                  <li><a href="quote.html">Teklif Al</a></li>
+                  <li><a href="privacy.html">Gizlilik</a></li>
+                  <li><a href="terms.html">Şartlar</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="footer-cta">
+            <h5>İletişime Geçelim</h5>
+            <a href="contact.html" class="btn btn-outline">İletişime Geç</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="footer-bottom-content">
+              <p class="mb-0">© 2024 Gezgin Ustalar. Tüm hakları saklıdır.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Gallery Lightbox -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize GLightbox for gallery images
+      const lightbox = GLightbox({
+        selector: '.gallery-item img',
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: false
+      });
+    });
+  </script>
+
+</body>
+
+</html>
