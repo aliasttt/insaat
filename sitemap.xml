@@ -12,35 +12,35 @@
     <image:image>
       <image:loc>https://gezginustalar.com/static/logo.jpg</image:loc>
       <image:title>Gezgin Ustalar Logo - Ev Dekorasyon Tamir Tadilat Hizmetleri</image:title>
-      <image:caption>Gezgin Ustalar - Ev Dekorasyon, Tamir & Tadilat Hizmetleri İstanbul</image:caption>
+      <image:caption>Gezgin Ustalar - Ev Dekorasyon, Tamir &amp; Tadilat Hizmetleri İstanbul</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gezginustalar.com/static/cephe boya işleri.jpg</image:loc>
+      <image:loc>https://gezginustalar.com/static/cephe%20boya%20i%C5%9Fleri.jpg</image:loc>
       <image:title>Dış Cephe Kaplama ve Boya İşleri</image:title>
       <image:caption>Dış Cephe Kaplama ve Boya Hizmetleri - Gezgin Ustalar</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gezginustalar.com/static/WhatsApp Image 2025-10-15 at 11.18.17 PM.jpeg</image:loc>
+      <image:loc>https://gezginustalar.com/static/WhatsApp%20Image%202025-10-15%20at%2011.18.17%20PM.jpeg</image:loc>
       <image:title>Daire İçi ve Villa Tadilatı Hizmetleri</image:title>
       <image:caption>Daire İçi ve Villa Tadilatı Hizmetleri - Gezgin Ustalar</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gezginustalar.com/static/WhatsApp Image 2025-10-15 at 11.31.38 PM.jpeg</image:loc>
+      <image:loc>https://gezginustalar.com/static/WhatsApp%20Image%202025-10-15%20at%2011.31.38%20PM.jpeg</image:loc>
       <image:title>İzolasyon ve Yalıtım Hizmetleri</image:title>
       <image:caption>İzolasyon ve Yalıtım Hizmetleri - Gezgin Ustalar</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gezginustalar.com/static/WhatsApp Image 2025-10-15 at 11.32.38 PM.jpeg</image:loc>
+      <image:loc>https://gezginustalar.com/static/WhatsApp%20Image%202025-10-15%20at%2011.32.38%20PM.jpeg</image:loc>
       <image:title>Karot Delme ve Kesme İşlemleri</image:title>
       <image:caption>Karot Delme ve Kesme İşlemleri - Gezgin Ustalar</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gezginustalar.com/static/Asansör içi tadilat.jpg</image:loc>
+      <image:loc>https://gezginustalar.com/static/Asansor%20ici%20tadilat.jpg</image:loc>
       <image:title>Asansör İçi Yenileme ve Tadilat Hizmetleri</image:title>
       <image:caption>Asansör İçi Yenileme ve Tadilat Hizmetleri - Gezgin Ustalar</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://gezginustalar.com/static/Kompozit işleri.jpg</image:loc>
+      <image:loc>https://gezginustalar.com/static/Kompozit%20isleri.jpg</image:loc>
       <image:title>Kompozit Cephe Tamiri ve Yenileme Hizmetleri</image:title>
       <image:caption>Kompozit Cephe Tamiri ve Yenileme Hizmetleri - Gezgin Ustalar</image:caption>
     </image:image>
@@ -48,8 +48,8 @@
       <video:thumbnail_loc>https://gezginustalar.com/static/logo.jpg</video:thumbnail_loc>
       <video:title>Gezgin Ustalar Ev Dekorasyon Tadilat Hizmetleri Video</video:title>
       <video:description>Gezgin Ustalar ev dekorasyon ve tadilat hizmetleri tanıtım videosu</video:description>
-      <video:content_loc>https://gezginustalar.com/static/WhatsApp Video 2025-10-15 at 11.12.56 PM.mp4</video:content_loc>
-      <video:player_loc allow_embed="yes" autoplay="autoplay=1">https://gezginustalar.com/static/WhatsApp Video 2025-10-15 at 11.12.56 PM.mp4</video:player_loc>
+      <video:content_loc>https://gezginustalar.com/static/WhatsApp%20Video%202025-10-15%20at%2011.12.56%20PM.mp4</video:content_loc>
+      <video:player_loc allow_embed="yes" autoplay="autoplay=1">https://gezginustalar.com/static/WhatsApp%20Video%202025-10-15%20at%2011.12.56%20PM.mp4</video:player_loc>
       <video:duration>30</video:duration>
       <video:publication_date>2025-01-16</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
@@ -58,8 +58,8 @@
       <video:thumbnail_loc>https://gezginustalar.com/static/logo.jpg</video:thumbnail_loc>
       <video:title>Gezgin Ustalar Dış Cephe Mantolama İzolasyon Hizmetleri Video</video:title>
       <video:description>Gezgin Ustalar dış cephe mantolama ve izolasyon hizmetleri tanıtım videosu</video:description>
-      <video:content_loc>https://gezginustalar.com/static/WhatsApp Video 2025-10-15 at 11.13.10 PM.mp4</video:content_loc>
-      <video:player_loc allow_embed="yes" autoplay="autoplay=1">https://gezginustalar.com/static/WhatsApp Video 2025-10-15 at 11.13.10 PM.mp4</video:player_loc>
+      <video:content_loc>https://gezginustalar.com/static/WhatsApp%20Video%202025-10-15%20at%2011.13.10%20PM.mp4</video:content_loc>
+      <video:player_loc allow_embed="yes" autoplay="autoplay=1">https://gezginustalar.com/static/WhatsApp%20Video%202025-10-15%20at%2011.13.10%20PM.mp4</video:player_loc>
       <video:duration>30</video:duration>
       <video:publication_date>2025-01-16</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
