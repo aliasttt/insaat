@@ -62,386 +62,512 @@
 
   <!-- Custom About Page Styles -->
   <style>
-    /* Enhanced About Page Styling */
-    .about-page .blog-post {
-      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-      border-radius: 20px;
-      padding: 40px;
-      margin-bottom: 30px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-      border: 1px solid rgba(233, 99, 8, 0.1);
-      position: relative;
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-
-    .about-page .blog-post::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #e96308, #ff8c42, #e96308);
-    }
-
-    .about-page .blog-post:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-    }
-
-    .about-page .blog-post h2 {
-      color: #2c1607;
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      position: relative;
-      padding-left: 20px;
-    }
-
-    .about-page .blog-post h2::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 4px;
-      height: 30px;
-      background: linear-gradient(135deg, #e96308, #ff8c42);
-      border-radius: 2px;
-    }
-
-    .about-page .blog-post h3 {
-      color: #e96308;
-      font-size: 1.8rem;
-      font-weight: 600;
-      margin-bottom: 1.2rem;
-      position: relative;
-      padding-left: 15px;
-    }
-
-    .about-page .blog-post h3::before {
-      content: '●';
-      position: absolute;
-      left: 0;
-      color: #e96308;
-      font-size: 1.2rem;
-    }
-
-    .about-page .blog-post h4 {
-      color: #342c26;
-      font-size: 1.4rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      position: relative;
-      padding-left: 10px;
-    }
-
-    .about-page .blog-post h4::before {
-      content: '▶';
-      position: absolute;
-      left: 0;
-      color: #e96308;
-      font-size: 0.8rem;
-    }
-
-    .about-page .blog-post p {
-      color: #342c26;
-      line-height: 1.8;
-      margin-bottom: 1.2rem;
-      font-size: 1.1rem;
-    }
-
-    .about-page .blog-post .lead {
-      font-size: 1.3rem;
-      font-weight: 500;
-      color: #2c1607;
-    }
-
-    .about-page .blog-post ul, .about-page .blog-post ol {
-      padding-left: 25px;
-      margin-bottom: 1.5rem;
-    }
-
-    .about-page .blog-post ul li {
-      color: #342c26;
-      line-height: 1.8;
-      margin-bottom: 0.8rem;
-      position: relative;
-    }
-
-    .about-page .blog-post ul li::marker {
-      color: #e96308;
-    }
-
-    .about-page .blog-post ol li {
-      color: #342c26;
-      line-height: 1.8;
-      margin-bottom: 0.8rem;
-    }
-
-    .about-page .blog-post strong {
-      color: #e96308;
-      font-weight: 600;
-    }
-
-    /* Enhanced Mission/Vision Cards */
-    .about-page .p-4.rounded-3 {
-      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
-      border: 2px solid rgba(233, 99, 8, 0.1);
-      border-radius: 20px !important;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .about-page .p-4.rounded-3::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #e96308, #ff8c42);
-    }
-
-    .about-page .p-4.rounded-3:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-      border-color: rgba(233, 99, 8, 0.3);
-    }
-
-    .about-page .p-4.rounded-3 h3 {
-      color: #2c1607;
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin-bottom: 1.2rem;
-      position: relative;
-      padding-left: 20px;
-    }
-
-    .about-page .p-4.rounded-3 h3::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 4px;
-      height: 25px;
-      background: linear-gradient(135deg, #e96308, #ff8c42);
-      border-radius: 2px;
-    }
-
-    .about-page .p-4.rounded-3 p {
-      color: #342c26;
-      line-height: 1.7;
-      font-size: 1.05rem;
-    }
-
-    .about-page .p-4.rounded-3 ul {
-      padding-left: 20px;
-    }
-
-    .about-page .p-4.rounded-3 ul li {
-      color: #342c26;
-      line-height: 1.7;
-      margin-bottom: 0.6rem;
-      position: relative;
-    }
-
-    .about-page .p-4.rounded-3 ul li::marker {
-      color: #e96308;
-    }
-
-    /* Enhanced Stats Grid */
-    .about-page .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 30px;
-      margin: 3rem 0;
-    }
-
-    .about-page .stat-item {
-      background: linear-gradient(135deg, #2c1607 0%, #342c26 100%);
-      color: white;
-      padding: 30px 20px;
-      border-radius: 15px;
+    /* Mission & Vision Cards */
+    .mission-card, .vision-card {
+      background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+      padding: 60px 50px;
+      border-radius: 30px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
       text-align: center;
-      box-shadow: 0 10px 25px rgba(44, 22, 7, 0.3);
-      transition: all 0.3s ease;
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      height: 100%;
       position: relative;
       overflow: hidden;
+      border: 3px solid rgba(233, 99, 8, 0.15);
+      backdrop-filter: blur(10px);
     }
 
-    .about-page .stat-item::before {
+    .mission-card::before, .vision-card::before {
       content: '';
       position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-      transform: rotate(45deg);
-      transition: all 0.6s ease;
-      opacity: 0;
-    }
-
-    .about-page .stat-item:hover::before {
-      opacity: 1;
-      animation: shine 0.6s ease-in-out;
-    }
-
-    @keyframes shine {
-      0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-      100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-    }
-
-    .about-page .stat-item:hover {
-      transform: translateY(-5px) scale(1.05);
-      box-shadow: 0 15px 35px rgba(44, 22, 7, 0.4);
-    }
-
-    .about-page .stat-number {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      display: block;
-    }
-
-    .about-page .stat-label {
-      font-size: 1rem;
-      font-weight: 500;
-      opacity: 0.9;
-    }
-
-    /* Enhanced Content Sections */
-    .about-page .content {
-      position: relative;
-    }
-
-    .about-page .section-heading {
-      position: relative;
-      padding-bottom: 20px;
-    }
-
-    .about-page .section-heading::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
+      top: 0;
       left: 0;
+      right: 0;
+      height: 8px;
+      background: linear-gradient(90deg, #e96308, #ff8c42, #e96308, #ff8c42);
+      background-size: 300% 100%;
+      animation: gradient-shift 4s ease-in-out infinite;
+      border-radius: 30px 30px 0 0;
+    }
+
+    .mission-card::after, .vision-card::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, rgba(233, 99, 8, 0.1), rgba(255, 140, 66, 0.1));
+      border-radius: 50%;
+      z-index: 1;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes gradient-shift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(180deg); }
+    }
+
+    .mission-card:hover, .vision-card:hover {
+      transform: translateY(-20px) scale(1.03);
+      box-shadow: 0 35px 80px rgba(233, 99, 8, 0.25);
+      border-color: rgba(233, 99, 8, 0.4);
+    }
+
+    .card-icon {
+      width: 120px;
+      height: 120px;
+      background: linear-gradient(135deg, #e96308, #ff8c42);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 35px;
+      color: white;
+      font-size: 3rem;
+      box-shadow: 0 15px 40px rgba(233, 99, 8, 0.4);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+      z-index: 2;
+    }
+
+    .card-icon::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      right: -8px;
+      bottom: -8px;
+      background: linear-gradient(135deg, #e96308, #ff8c42);
+      border-radius: 50%;
+      z-index: -1;
+      opacity: 0;
+      transition: all 0.4s ease;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0; }
+      50% { transform: scale(1.1); opacity: 0.3; }
+    }
+
+    .mission-card:hover .card-icon, .vision-card:hover .card-icon {
+      transform: scale(1.15) rotate(10deg);
+      box-shadow: 0 20px 50px rgba(233, 99, 8, 0.5);
+    }
+
+    .mission-card:hover .card-icon::before, .vision-card:hover .card-icon::before {
+      opacity: 0.4;
+      animation: none;
+    }
+
+    .mission-card h3, .vision-card h3 {
+      color: #2c1607;
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 30px;
+      position: relative;
+      text-shadow: 0 3px 6px rgba(0,0,0,0.15);
+      background: linear-gradient(135deg, #2c1607, #342c26);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .mission-card h3::after, .vision-card h3::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
       width: 60px;
       height: 4px;
       background: linear-gradient(90deg, #e96308, #ff8c42);
       border-radius: 2px;
+      box-shadow: 0 2px 8px rgba(233, 99, 8, 0.3);
     }
 
-    .about-page .lead-text {
+    .mission-card p, .vision-card p {
+      color: #342c26;
+      line-height: 1.9;
       font-size: 1.3rem;
-      font-weight: 400;
-      color: #2c1607;
-      line-height: 1.7;
+      font-weight: 500;
+      text-align: justify;
+      position: relative;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      padding: 20px;
+      background: linear-gradient(135deg, rgba(233, 99, 8, 0.03), rgba(255, 140, 66, 0.03));
+      border-radius: 15px;
+      border-left: 4px solid #e96308;
     }
 
-    .about-page .description-text {
-      font-size: 1.1rem;
+    /* Feature Cards */
+    .feature-card {
+      background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+      padding: 50px 35px;
+      border-radius: 25px;
+      box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      height: 100%;
+      border: 3px solid rgba(233, 99, 8, 0.15);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(233, 99, 8, 0.15), transparent);
+      transition: all 0.8s ease;
+    }
+
+    .feature-card::after {
+      content: '';
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, rgba(233, 99, 8, 0.1), rgba(255, 140, 66, 0.1));
+      border-radius: 50%;
+      z-index: 1;
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .feature-card:hover::before {
+      left: 100%;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-15px) scale(1.05);
+      box-shadow: 0 25px 60px rgba(233, 99, 8, 0.2);
+      border-color: rgba(233, 99, 8, 0.5);
+    }
+
+    .feature-icon {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, #e96308, #ff8c42);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 30px;
+      color: white;
+      font-size: 2.5rem;
+      box-shadow: 0 12px 35px rgba(233, 99, 8, 0.4);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+      z-index: 2;
+    }
+
+    .feature-icon::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: -6px;
+      right: -6px;
+      bottom: -6px;
+      background: linear-gradient(135deg, #e96308, #ff8c42);
+      border-radius: 50%;
+      z-index: -1;
+      opacity: 0;
+      transition: all 0.4s ease;
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    .feature-card:hover .feature-icon {
+      transform: scale(1.2) rotate(15deg);
+      box-shadow: 0 18px 45px rgba(233, 99, 8, 0.5);
+    }
+
+    .feature-card:hover .feature-icon::before {
+      opacity: 0.3;
+      animation: none;
+    }
+
+    .feature-card h4 {
+      color: #2c1607;
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      position: relative;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background: linear-gradient(135deg, #2c1607, #342c26);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .feature-card h4::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 3px;
+      background: linear-gradient(90deg, #e96308, #ff8c42);
+      border-radius: 2px;
+      box-shadow: 0 2px 6px rgba(233, 99, 8, 0.3);
+    }
+
+    .feature-card p {
       color: #342c26;
       line-height: 1.8;
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      padding: 15px;
+      background: linear-gradient(135deg, rgba(233, 99, 8, 0.02), rgba(255, 140, 66, 0.02));
+      border-radius: 10px;
+      border-left: 3px solid #e96308;
     }
 
-    /* Enhanced CTA Section */
-    .about-page .cta-section {
-      text-align: center;
-      margin-top: 3rem;
+    /* Content Sections */
+    .content-section {
+      background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+      padding: 60px 50px;
+      border-radius: 25px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid rgba(233, 99, 8, 0.1);
     }
 
-    .about-page .cta-link {
-      display: inline-flex;
-      align-items: center;
-      background: linear-gradient(135deg, #e96308 0%, #ff8c42 100%);
-      color: white;
-      padding: 15px 30px;
-      border-radius: 50px;
-      text-decoration: none;
+    .content-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, #e96308, #ff8c42, #e96308);
+      background-size: 200% 100%;
+      animation: gradient-shift 4s ease-in-out infinite;
+    }
+
+    .content-section::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, rgba(233, 99, 8, 0.1), rgba(255, 140, 66, 0.1));
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .lead-text {
+      font-size: 1.5rem;
+      color: #2c1607;
       font-weight: 600;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 20px rgba(233, 99, 8, 0.3);
+      line-height: 1.8;
+      margin-bottom: 25px;
+      position: relative;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(135deg, rgba(233, 99, 8, 0.05), rgba(255, 140, 66, 0.05));
+      border-radius: 15px;
+      border-left: 5px solid #e96308;
     }
 
-    .about-page .cta-link:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 25px rgba(233, 99, 8, 0.4);
+    .description-text {
+      font-size: 1.2rem;
+      color: #342c26;
+      line-height: 1.8;
+      margin-bottom: 25px;
+      position: relative;
+      padding: 20px 0;
+      text-align: justify;
+      font-weight: 400;
+    }
+
+    .description-text::before {
+      content: '✨';
+      position: absolute;
+      left: -30px;
+      top: 20px;
+      font-size: 1.5rem;
+      color: #e96308;
+    }
+
+    .description-text:first-of-type::before {
+      content: '🏠';
+    }
+
+    .description-text:last-of-type::before {
+      content: '⚡';
+    }
+
+    /* Principle Cards */
+    .principle-card {
+      background: white;
+      padding: 35px 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: all 0.3s ease;
+      height: 100%;
+      border: 1px solid rgba(233, 99, 8, 0.1);
+    }
+
+    .principle-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+      border-color: rgba(233, 99, 8, 0.3);
+    }
+
+    .principle-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #e96308, #ff8c42);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 25px;
       color: white;
+      font-size: 2rem;
+    }
+
+    .principle-card h4 {
+      color: #2c1607;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .principle-card p {
+      color: #342c26;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    /* Final Message */
+    .final-message {
+      background: linear-gradient(135deg, #e96308, #ff8c42);
+      color: white;
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(233, 99, 8, 0.3);
+    }
+
+    .final-message h3 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .final-message p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      opacity: 0.95;
+    }
+
+    /* Section Headings */
+    .section-heading {
+      color: #2c1607;
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 25px;
+      position: relative;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .section-heading::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 5px;
+      background: linear-gradient(135deg, #e96308, #ff8c42);
+      border-radius: 3px;
+      box-shadow: 0 2px 8px rgba(233, 99, 8, 0.3);
+    }
+
+    .section-description {
+      color: #342c26;
+      font-size: 1.4rem;
+      line-height: 1.6;
+      margin-bottom: 0;
+      font-weight: 500;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+
+    /* Services Overview Special Styling */
+    .services-overview .section-heading {
+      background: linear-gradient(135deg, #e96308, #ff8c42);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-size: 3rem;
+      margin-bottom: 30px;
+    }
+
+    .services-overview .section-description {
+      color: #e96308;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 40px;
     }
 
     /* Responsive Design */
     @media (max-width: 768px) {
-      .about-page .blog-post {
-        padding: 25px;
+      .mission-card, .vision-card {
+        padding: 30px 20px;
+        margin-bottom: 30px;
+      }
+      
+      .feature-card, .principle-card {
+        padding: 25px 20px;
         margin-bottom: 20px;
       }
 
-      .about-page .blog-post h2 {
+      .content-section {
+        padding: 30px 20px;
+      }
+      
+      .final-message {
+        padding: 40px 25px;
+      }
+      
+      .final-message h3 {
         font-size: 1.8rem;
       }
 
-      .about-page .blog-post h3 {
+      .section-heading {
+        font-size: 2rem;
+      }
+      
+      .card-icon, .principle-icon {
+        width: 60px;
+        height: 60px;
         font-size: 1.5rem;
       }
 
-      .about-page .blog-post h4 {
-        font-size: 1.2rem;
+      .feature-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
       }
-
-      .about-page .stats-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .about-page .p-4.rounded-3 {
-        padding: 25px !important;
-      }
-    }
-
-    /* Animation Enhancements */
-    .about-page [data-aos] {
-      transition-duration: 0.8s;
-    }
-
-    .about-page .blog-post[data-aos] {
-      transition-delay: 0.1s;
-    }
-
-    /* Floating Elements Enhancement */
-    .about-page .floating-badge {
-      background: linear-gradient(135deg, #2c1607 0%, #342c26 100%);
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 10px 25px rgba(44, 22, 7, 0.3);
-      animation: float 3s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-    }
-
-    .about-page .badge-content {
-      color: white;
-      text-align: center;
-    }
-
-    .about-page .badge-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    .about-page .badge-subtitle {
-      font-size: 0.9rem;
-      opacity: 0.9;
     }
   </style>
 
@@ -483,7 +609,7 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(static/safety-tools-painting-work.jpg);">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url('static/WhatsApp Image 2025-10-18 at 12.24.56 PM.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
       <div class="container position-relative">
         <h1>Hakkımızda</h1>
         <p>13 yıllık tecrübe ile kaliteli hizmet, güvenilir çözüm. İstanbul genelinde tadilat, tamirat, mantolama, izolasyon ve dekorasyon alanlarında güvenilir, kaliteli ve garantili hizmet sunuyoruz.</p>
@@ -508,8 +634,7 @@
               <h2 class="section-heading mb-4">13 Yıllık Tecrübe ile Kaliteli Hizmet, Güvenilir Çözüm</h2>
               <p class="lead-text mb-4">Gezgin Ustalar, 13 yıllık sektör deneyimiyle tadilat, tamirat, dekorasyon ve mantolama alanlarında İstanbul genelinde profesyonel çözümler sunar.</p>
               <p class="description-text mb-4">Malzeme bilgisine hâkim, alanında uzman ustalarımızla; kaliteli işçilik, estetik uygulamalar ve zamanında teslim anlayışını bir araya getiriyoruz.</p>
-              <p class="description-text mb-4">Evinizi veya iş yerinizi yenilemek mi istiyorsunuz? Biz, ihtiyaçlarınıza en uygun çözümleri sunarak yaşam alanlarınızı konforlu, modern ve uzun ömürlü hale getiriyoruz.</p>
-              <p class="description-text mb-5">Dış cephe mantolama, boya ve sıva işleri, banyo ve mutfak tadilatı, zemin uygulamaları ve daha birçok hizmette güvenilir sonuçlar elde etmenizi sağlıyoruz. Her projeye özenle yaklaşır, doğru malzeme seçimi ve profesyonel işçilikle fark yaratırız. Müşteri memnuniyetini ön planda tutan anlayışımızla, sadece bugünü değil, geleceğinizi de düşünerek çalışıyoruz.</p>
+              <p class="description-text mb-5">Evinizi veya iş yerinizi yenilemek mi istiyorsunuz? Biz, ihtiyaçlarınıza en uygun çözümleri sunarak yaşam alanlarınızı konforlu, modern ve uzun ömürlü hale getiriyoruz.</p>
 
               <div class="stats-grid">
                 <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
@@ -571,187 +696,174 @@
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="p-4 rounded-3" style="background: var(--surface-color);">
               <h3 class="mb-3">Vizyonumuz</h3>
-              <p>İstanbul'un dört bir yanında, güvenilir ve sürdürülebilir hizmet anlayışıyla tanınan lider tadilat ve dekorasyon markalarından biri olmak. Her adımda teknoloji, yenilik ve ustalığı bir araya getirerek, yaşam alanlarını geleceğe taşımak.</p>
-            </div>
-          </div>
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="250">
-            <div class="p-4 rounded-3" style="background: var(--surface-color);">
-              <h3 class="mb-3">Neden Gezgin Ustalar?</h3>
-              <ul class="mb-0">
-                <li>13 yıllık sektör deneyimi</li>
-                <li>Malzeme bilgisine sahip uzman ustalar</li>
-                <li>Tadilat, tamirat, dekorasyon ve mantolama çözümleri tek çatı altında</li>
-                <li>Temiz çalışma prensibi ve garantili işçilik</li>
-                <li>Zamanında teslim ve müşteri odaklı hizmet</li>
-              </ul>
+              <p>İstanbul’un dört bir yanında, güvenilir ve sürdürülebilir hizmet anlayışıyla tanınan lider tadilat ve dekorasyon markalarından biri olmak. Teknoloji, yenilik ve ustalığı bir araya getirerek yaşam alanlarını geleceğe taşımak.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Blog Content Section -->
-    <section id="blog-content" class="about section light-background">
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision section light-background">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        
-        <!-- Ev Dekorasyon Blog -->
-        <div class="row mb-5">
-          <div class="col-12">
-            <div class="blog-post" data-aos="fade-up" data-aos-delay="150">
-              <h2 class="mb-4">Ev Dekorasyon, Daire Boyama ve Mantolama Hizmetleri | 1+1'den 4+1'e Profesyonel Çözümler</h2>
-              <p class="lead mb-4">Evlerimiz, yaşam tarzımızın bir yansımasıdır. Zamanla değişen ihtiyaçlar, yıpranan yüzeyler ve yeni trendler; ev dekorasyonunda yeniliği kaçınılmaz kılar.</p>
-              <p class="mb-4">İster 1+1 küçük bir daire, ister 4+1 geniş bir aile evi olsun — biz, her ölçekte profesyonel boya, tadilat, mantolama ve yalıtım hizmetleri sunuyoruz.</p>
-              <p class="mb-5">Temiz çalışma prensibi, garantili işçilik ve zamanında teslim politikamızla, yaşam alanlarınıza konfor ve estetik kazandırıyoruz.</p>
+        <div class="row">
+          <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right" data-aos-delay="200">
+            <div class="mission-card">
+              <div class="card-icon">
+                <i class="bi bi-award"></i>
+              </div>
+              <h3>Misyonumuz</h3>
+              <p>Müşteri memnuniyetini en üst seviyede tutarak; estetik, fonksiyonel ve uzun ömürlü yaşam alanları oluşturmak. Her projede kaliteli malzeme, profesyonel işçilik ve doğru planlama ile fark yaratmak.</p>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="vision-card">
+              <div class="card-icon">
+                <i class="bi bi-eye"></i>
+              </div>
+              <h3>Vizyonumuz</h3>
+              <p>İstanbul'un dört bir yanında, güvenilir ve sürdürülebilir hizmet anlayışıyla tanınan lider tadilat ve dekorasyon markalarından biri olmak. Her adımda teknoloji, yenilik ve ustalığı bir araya getirerek, yaşam alanlarını geleceğe taşımak.</p>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Daire Boyama Section -->
-        <div class="row mb-5">
-          <div class="col-12">
-            <div class="blog-post" data-aos="fade-up" data-aos-delay="200">
-              <h3 class="mb-4">Daire Boyama Hizmetleri: 1+1, 2+1, 3+1, 4+1</h3>
-              <p class="mb-4">Daire boyama, evinizin havasını değiştiren en etkili işlemlerden biridir. Her daire tipi için özel planlama ve boya uygulaması yapıyoruz.</p>
-              
-              <h4 class="mb-3">1+1 ve 2+1 Dairelerde Boya & Tavan Uygulamaları</h4>
-              <p class="mb-3">Küçük metrekareli evlerde doğru renk ve tavan boyası seçimi, mekanı daha geniş gösterir.</p>
-              <p class="mb-3">Uzman ekibimiz:</p>
-              <ul class="mb-4">
-                <li>Yüzey hazırlığı ve astar uygulaması yapar,</li>
-                <li>Kaliteli, silinebilir boya tercih eder,</li>
-                <li>Tavan boyasını kusursuz şekilde uygular,</li>
-                <li>İşlem sonunda ortamı temiz ve düzenli teslim eder.</li>
-              </ul>
-
-              <h4 class="mb-3">3+1 ve 4+1 Dairelerde Profesyonel Boya Hizmeti</h4>
-              <p class="mb-3">Geniş metrekareli dairelerde estetik ve dayanıklılık ön plandadır.</p>
-              <ul class="mb-4">
-                <li>Duvar çatlak onarımı ve macunlama işlemleri,</li>
-                <li>Dekoratif boya teknikleri,</li>
-                <li>Alçıpan tavan sistemleri, niş tasarımları ve aydınlatma uygulamalarıyla estetik çözümler sunarız.</li>
-              </ul>
+    <!-- Why Choose Us Section -->
+    <section class="why-choose section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-8">
+            <h2 class="section-heading">Neden Gezgin Ustalar?</h2>
+            <p class="section-description">13 yıllık deneyimimizle size en iyi hizmeti sunuyoruz</p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-clock-history"></i>
+              </div>
+              <h4>13 Yıllık Deneyim</h4>
+              <p>Sektörde 13 yıllık tecrübemizle her türlü projeyi başarıyla tamamlıyoruz.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-tools"></i>
+              </div>
+              <h4>Uzman Ustalar</h4>
+              <p>Malzeme bilgisine sahip, alanında uzman ustalarımızla çalışıyoruz.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-house-gear"></i>
+              </div>
+              <h4>Kapsamlı Hizmet</h4>
+              <p>Tadilat, tamirat, dekorasyon ve mantolama çözümleri tek çatı altında.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h4>Garantili İşçilik</h4>
+              <p>Temiz çalışma prensibi ve garantili işçilik anlayışımızla hizmet veriyoruz.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-calendar-check"></i>
+              </div>
+              <h4>Zamanında Teslim</h4>
+              <p>Zamanında teslim ve müşteri odaklı hizmet anlayışımızla çalışıyoruz.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-heart"></i>
+              </div>
+              <h4>Müşteri Memnuniyeti</h4>
+              <p>Müşteri memnuniyetini ön planda tutan anlayışımızla hizmet veriyoruz.</p>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Dış Cephe Mantolama Section -->
-        <div class="row mb-5">
-          <div class="col-12">
-            <div class="blog-post" data-aos="fade-up" data-aos-delay="250">
-              <h3 class="mb-4">Dış Cephe Mantolama ve İzolasyon Hizmetleri</h3>
-              <p class="mb-4">Enerji tasarrufu ve konforlu yaşamın sırrı, kaliteli bir mantolama uygulamasıdır. Dış cephe mantolama, binalarda ısı kaybını azaltırken aynı zamanda cephe estetiğini artırır.</p>
-              
-              <h4 class="mb-3">Asma İskele, Boya & Tamirat Hizmetleri ile Cephe Yenileme</h4>
-              <p class="mb-3">Firmamız; bina dış cephe tadilatı sırasında;</p>
-              <ul class="mb-4">
-                <li>Asma iskele ile tamir tadilat işlerinden</li>
-                <li>Mastik silikon çekim tamiratına,</li>
-                <li>Cephe boya uygulamasına,</li>
-                <li>Basınçlı yıkama ile cephe temizliğine kadar tüm işlemleri koordineli ve profesyonel biçimde yürütür.</li>
-              </ul>
-
-              <h4 class="mb-3">Hizmetlerimiz ve Neden Biz?</h4>
-              <ul class="mb-4">
-                <li>Dış cephe & bina cephe mantolama işlemlerinde en yeni yalıtım sistemlerini kullanırız.</li>
-                <li>Tamir tadilat ve boya onarımları, çatlak tamiri, sıva yenileme, yüzey düzeltme ile kusursuz hale gelir.</li>
-                <li>Asma iskele ile çalışma ile güven ve hız sağlanır.</li>
-                <li>Mastik silikon çekimi tamiri ile cephe birleşim noktalarındaki su sızmaları giderilir.</li>
-                <li>Cephe boyama ve cephe yıkama (basınçlı yıkama) ile dış yüzeyler hem temizlenir hem yenilenir.</li>
-              </ul>
-
-              <h4 class="mb-3">Mantolama ve Onarım Uygulamaları</h4>
-              <p class="mb-3">Mevcut mantolama yüzeyinde oluşan kabarma, çatlak veya boya dökülmeleri varsa mantolama onarımı hizmetimiz devreye girer. Yüzey yenileme sonrası, cephe boya uygulamaları ile binanızın görünümünü tamamen yenileriz.</p>
-
-              <h4 class="mb-3">Isı, Su ve Ses Yalıtımı</h4>
-              <ul class="mb-4">
-                <li><strong>Isı yalıtımı:</strong> Yakıt giderlerini düşürür, ısı kaybını önler.</li>
-                <li><strong>Su yalıtımı:</strong> Nem, rutubet ve küf oluşumunu engeller.</li>
-                <li><strong>Ses yalıtımı:</strong> Daireler arası ses geçişini azaltır, sessiz yaşam alanı sağlar.</li>
-              </ul>
+    <!-- Services Overview Section -->
+    <section class="services-overview section light-background">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-8">
+            <h2 class="section-heading">Ev Dekorasyon, Daire Boyama ve Mantolama Hizmetleri</h2>
+            <p class="section-description">1+1'den 4+1'e Profesyonel Çözümler</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="content-section" data-aos="fade-up" data-aos-delay="200">
+              <p class="lead-text">Evlerimiz, yaşam tarzımızın bir yansımasıdır. Zamanla değişen ihtiyaçlar, yıpranan yüzeyler ve yeni trendler; ev dekorasyonunda yeniliği kaçınılmaz kılar.</p>
+              <p class="description-text">İster 1+1 küçük bir daire, ister 4+1 geniş bir aile evi olsun — biz, her ölçekte profesyonel boya, tadilat, mantolama ve yalıtım hizmetleri sunuyoruz.</p>
+              <p class="description-text">Temiz çalışma prensibi, garantili işçilik ve zamanında teslim politikamızla, yaşam alanlarınıza konfor ve estetik kazandırıyoruz.</p>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Su Yalıtımı Section -->
-        <div class="row mb-5">
-          <div class="col-12">
-            <div class="blog-post" data-aos="fade-up" data-aos-delay="300">
-              <h3 class="mb-4">Su Yalıtımı Nasıl Yapılır?</h3>
-              <p class="mb-4">Yapı sahiplerinin en çok merak ettiği konu: su yalıtımı nasıl yapılır?</p>
-              <p class="mb-3">Bu sorunun cevabında:</p>
-              <ol class="mb-4">
-                <li><strong>Yüzey hazırlığı:</strong> Eski boya, gevşek kısımlar ve toz temizlenir.</li>
-                <li><strong>Astar uygulamasıyla</strong> yüzeyin emiciliği dengelenir.</li>
-                <li><strong>Seçilen su yalıtım malzemesi</strong> (çimento esaslı, poliüretan, bitüm esaslı vb.) kat kat uygulanır.</li>
-                <li><strong>Derzler, köşe detayları ve geçiş noktaları</strong> mastik silikon çekimi ile detaylandırılır.</li>
-                <li><strong>Kuruma süresi sonrası</strong> kaplama ya da üst katman koruyucu boya ile tamamlanır.</li>
-              </ol>
-
-              <h4 class="mb-3">Su Yalıtımında Dikkat Edilmesi Gereken Noktalar</h4>
-              <ul class="mb-4">
-                <li><strong>Malzeme seçimi:</strong> Çimento esaslı, likit membran, poliüretan, bitüm esaslı sistemler gibi farklı tipler vardır.</li>
-                <li><strong>Derz ve geçiş detayları:</strong> Duvardan terasa veya duvara geçiş gibi noktalarda mastik silikon çekimi ile su geçirmezlik sağlanmalı.</li>
-                <li><strong>Profesyonel uygulama:</strong> Yanlış yapılan bir uygulama kısa sürede yıpranma ve tekrar onarım gereksinimi doğurur.</li>
-                <li><strong>Garanti ve işçilik:</strong> Uygulama sonrasında garanti veren ve temiz çalışma prensibini benimseyen firmalar tercih edilmelidir.</li>
-                <li><strong>Kuruma süresi ve test:</strong> Uygulama tamamlandıktan sonra su testi yapılmalı; kuruma süresine mutlaka uyulmalı.</li>
-              </ul>
-              <p class="mb-4">Su yalıtımı, evlerinizin ömrünü uzatan ve sizi ileride karşılaşılabilecek nem, küf ve su sızıntılarıyla oluşabilecek maliyetlerden koruyan kritik bir hizmettir.</p>
+    <!-- Professional Service Section -->
+    <section class="professional-service section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-8">
+            <h2 class="section-heading">Profesyonel, Garantili ve Zamanında Teslim Hizmet</h2>
+            <p class="section-description">Tüm çalışmalarımızda üç temel ilkemiz vardır</p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="principle-card">
+              <div class="principle-icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <h4>Profesyonel Ekip</h4>
+              <p>Deneyimli ustalar ve mühendis kontrolü ile her projede profesyonel ekip çalışması sağlıyoruz.</p>
+            </div>
+          </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="principle-card">
+              <div class="principle-icon">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h4>Garantili İşçilik</h4>
+              <p>Her işlem sözleşme ile güvence altına alınır ve garantili işçilik anlayışımızla hizmet veriyoruz.</p>
+            </div>
+          </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="principle-card">
+              <div class="principle-icon">
+                <i class="bi bi-broom"></i>
+        </div>
+              <h4>Temiz Çalışma</h4>
+              <p>Eşyalarınız korunur, iş bitiminde ortam tertemiz teslim edilir ve temiz çalışma prensibi uygulanır.</p>
             </div>
           </div>
         </div>
-
-        <!-- İç Mekan Tadilat Section -->
-        <div class="row mb-5">
-          <div class="col-12">
-            <div class="blog-post" data-aos="fade-up" data-aos-delay="350">
-              <h3 class="mb-4">İç Mekan Tadilat ve Dekorasyon Hizmetleri</h3>
-              <p class="mb-4">Ev dekorasyonu sadece estetik değil, aynı zamanda fonksiyonellik ister. Profesyonel tadilat ekibimizle tüm dairelerde anahtar teslim çözümler sunuyoruz.</p>
-              
-              <h4 class="mb-3">Alçıpan Tavan Sistemleri</h4>
-              <p class="mb-4">Modern iç mekan tasarımlarında alçıpan tavan sistemleri, LED aydınlatmalar ve gizli niş detaylarıyla fark yaratır.</p>
-
-              <h4 class="mb-3">Parke Döşeme Ustası Hizmeti</h4>
-              <p class="mb-4">Yüzey düzeltme, süpürgelik montajı ve laminat parke uygulamalarında uzman ekibimizle kusursuz sonuçlar sunuyoruz.</p>
-
-              <h4 class="mb-3">Banyo ve Mutfak Yenileme</h4>
-              <ul class="mb-4">
-                <li>Seramik ve fayans uygulamaları,</li>
-                <li>Tesisat yenileme,</li>
-                <li>Dolap, tezgah ve armatür değişimleri,</li>
-                <li>Suya dayanıklı boya ve silikon detaylarıyla uzun ömürlü yenileme hizmetleri sağlıyoruz.</li>
-              </ul>
-
-              <h4 class="mb-3">TV Ünitesi ve Niş Tasarımı</h4>
-              <p class="mb-4">Salon veya oturma odasında şık, modern ve işlevsel TV ünitesi ve niş tasarımları ile yaşam alanlarınızı güzelleştiriyoruz.</p>
-
-              <h4 class="mb-3">Karot Delme, Cephe Boya ve Söve Tadilatı</h4>
-              <ul class="mb-4">
-                <li>Karot delme ve kesme işlemleriyle tesisat geçişleri profesyonelce açılır,</li>
-                <li>Cephe boya uygulamaları ile estetik görünüm sağlanır,</li>
-                <li>Söve tadilatı ile dış cephede zarif detaylar oluşturulur.</li>
-              </ul>
+        <div class="row mt-5">
+          <div class="col-lg-12 text-center" data-aos="fade-up" data-aos-delay="500">
+            <div class="final-message">
+              <h3>Gezgin Ustalar – Tecrübe, güven ve kaliteli hizmetin birleştiği adres.</h3>
+              <p>Her projede; kaliteli malzeme, deneyimli ekip ve titiz işçilik ile evinizi yenilemenin en kolay ve güvenli yoluyuz.</p>
             </div>
           </div>
         </div>
-
-        <!-- Profesyonel Hizmet Section -->
-        <div class="row mb-5">
-          <div class="col-12">
-            <div class="blog-post" data-aos="fade-up" data-aos-delay="400">
-              <h3 class="mb-4">Profesyonel, Garantili ve Zamanında Teslim Hizmet</h3>
-              <p class="mb-4">Tüm çalışmalarımızda üç temel ilkemiz vardır:</p>
-              <ol class="mb-4">
-                <li><strong>Profesyonel ekip çalışması</strong> – Deneyimli ustalar ve mühendis kontrolü</li>
-                <li><strong>Garantili işçilik</strong> – Her işlem sözleşme ile güvence altına alınır</li>
-                <li><strong>Temiz çalışma prensibi</strong> – Eşyalarınız korunur, iş bitiminde ortam tertemiz teslim edilir</li>
-              </ol>
-              <p class="mb-4">Zamanında teslim prensibimizle projeleriniz planlandığı tarihte tamamlanır. Müşteri memnuniyeti, bizim için en önemli başarı ölçüsüdür.</p>
-              <p class="mb-4">Her projede; kaliteli malzeme, deneyimli ekip ve titiz işçilik ile evinizi yenilemenin en kolay ve güvenli yoluyuz.</p>
-              <p class="mb-0"><strong>Gezgin Ustalar – Tecrübe, güven ve kaliteli hizmetin birleştiği adres.</strong></p>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
 
