@@ -33,15 +33,16 @@
     }
 
     .service-details-page .stat-item {
-      background: linear-gradient(135deg, #2c1607 0%, #342c26 100%);
-      color: white;
+      background: transparent;
+      color: #2c1607;
       padding: 25px 15px;
       border-radius: 15px;
       text-align: center;
-      box-shadow: 0 10px 25px rgba(44, 22, 7, 0.3);
+      box-shadow: none;
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
+      border: 2px solid rgba(233, 99, 8, 0.2);
     }
 
     .service-details-page .stat-item::before {
@@ -69,7 +70,9 @@
 
     .service-details-page .stat-item:hover {
       transform: translateY(-5px) scale(1.05);
-      box-shadow: 0 15px 35px rgba(44, 22, 7, 0.4);
+      box-shadow: 0 15px 35px rgba(233, 99, 8, 0.2);
+      border-color: rgba(233, 99, 8, 0.5);
+      background: rgba(233, 99, 8, 0.05);
     }
 
     .service-details-page .stat-number {
@@ -146,7 +149,7 @@
     }
 
     .service-details-page .service-content p {
-      color: #342c26;
+      color: #666666;
       line-height: 1.8;
       margin-bottom: 1.2rem;
       font-size: 1.1rem;
@@ -234,7 +237,7 @@
     }
 
     .service-details-page .info-item span {
-      color: #342c26;
+      color: #666666;
     }
 
     /* Enhanced CTA Card */
@@ -372,7 +375,7 @@
     }
 
     .service-details-page .feature-item p {
-      color: #342c26;
+      color: #666666;
       line-height: 1.6;
     }
 
@@ -457,6 +460,171 @@
     .service-details-page .feature-item[data-aos] {
       transition-delay: 0.1s;
     }
+
+    /* Project Gallery Styling */
+    .service-details-page .project-gallery {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-details-page .project-gallery::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(233, 99, 8, 0.05) 0%, transparent 70%);
+      animation: float 8s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-30px) rotate(180deg); }
+    }
+
+    .service-details-page .project-gallery h2 {
+      color: #2c1607;
+      font-size: 2.5rem;
+      font-weight: 700;
+      position: relative;
+      z-index: 2;
+    }
+
+    .service-details-page .project-gallery h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, #e96308, #ff8c42);
+      border-radius: 2px;
+    }
+
+    .service-details-page .gallery-item {
+      position: relative;
+      z-index: 2;
+    }
+
+    .service-details-page .gallery-image-container {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      background: white;
+      padding: 6px;
+      height: 350px;
+    }
+
+    .service-details-page .gallery-image-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, #e96308, #ff8c42, #e96308);
+      border-radius: 20px;
+      z-index: -1;
+      animation: gradient-shift 4s ease-in-out infinite;
+    }
+
+    @keyframes gradient-shift {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 1; }
+    }
+
+    .service-details-page .gallery-image-container:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 25px 50px rgba(233, 99, 8, 0.3);
+    }
+
+    .service-details-page .gallery-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      display: block;
+    }
+
+    .service-details-page .gallery-image-container:hover .gallery-image {
+      transform: scale(1.1);
+      filter: brightness(1.1) contrast(1.1);
+    }
+
+    .service-details-page .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(233, 99, 8, 0.9) 0%, rgba(255, 140, 66, 0.8) 100%);
+      padding: 25px;
+      color: white;
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px;
+    }
+
+    .service-details-page .gallery-image-container:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .service-details-page .gallery-content {
+      text-align: center;
+      transform: translateY(20px);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .service-details-page .gallery-image-container:hover .gallery-content {
+      transform: translateY(0);
+    }
+
+    .service-details-page .gallery-content h4 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .service-details-page .gallery-content p {
+      font-size: 1rem;
+      margin-bottom: 0;
+      opacity: 0.95;
+      line-height: 1.5;
+    }
+
+    /* Responsive adjustments for gallery */
+    @media (max-width: 768px) {
+      .service-details-page .project-gallery h2 {
+        font-size: 2rem;
+      }
+      
+      .service-details-page .gallery-image-container {
+        height: 280px;
+        margin-bottom: 20px;
+      }
+      
+      .service-details-page .gallery-overlay {
+        padding: 20px;
+      }
+      
+      .service-details-page .gallery-content h4 {
+        font-size: 1.2rem;
+      }
+      
+      .service-details-page .gallery-content p {
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 
@@ -489,7 +657,7 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(static/WhatsApp Image 2025-10-15 at 11.18.17 PM.jpeg);">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url('static/WhatsApp Image 2025-10-18 at 12.12.09 PM.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
       <div class="container position-relative">
         <h1>Daire İçi Ve Villa Tadilatı Hizmetleri</h1>
         <p>Daire ve villa tadilatlarında alçı, boya, alçıpan, zemin kaplama, seramik ve duşakabin montaj hizmetleri.</p>
@@ -636,6 +804,71 @@
       </div>
 
     </section><!-- /Service Details Section -->
+
+    <!-- Project Gallery Section -->
+    <section class="project-gallery py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="text-center mb-5" data-aos="fade-up">Proje Örnekleri</h2>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-6 col-md-6">
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+              <div class="gallery-image-container">
+                <img src="static/WhatsApp Image 2025-10-18 at 12.12.36 PM.jpeg" alt="İç Mekan Tadilat Projesi 1" class="gallery-image">
+                <div class="gallery-overlay">
+                  <div class="gallery-content">
+                    <h4>Modern Salon Tasarımı</h4>
+                    <p>Lüks salon tadilatı</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+              <div class="gallery-image-container">
+                <img src="static/WhatsApp Image 2025-10-18 at 12.13.08 PM.jpeg" alt="İç Mekan Tadilat Projesi 2" class="gallery-image">
+                <div class="gallery-overlay">
+                  <div class="gallery-content">
+                    <h4>Şık Banyo Tasarımı</h4>
+                    <p>Modern banyo yenileme</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="gallery-image-container">
+                <img src="static/WhatsApp Image 2025-10-18 at 12.15.54 PM.jpeg" alt="İç Mekan Tadilat Projesi 3" class="gallery-image">
+                <div class="gallery-overlay">
+                  <div class="gallery-content">
+                    <h4>Koridor Tasarımı</h4>
+                    <p>Şık koridor yenileme</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="gallery-image-container">
+                <img src="static/WhatsApp Image 2025-10-18 at 12.16.51 PM (1).jpeg" alt="İç Mekan Tadilat Projesi 4" class="gallery-image">
+                <div class="gallery-overlay">
+                  <div class="gallery-content">
+                    <h4>Profesyonel Çalışma</h4>
+                    <p>Temiz ve planlı tadilat</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Project Gallery Section -->
 
   </main>
 
