@@ -60,6 +60,391 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Custom About Page Styles -->
+  <style>
+    /* Enhanced About Page Styling */
+    .about-page .blog-post {
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      border: 1px solid rgba(233, 99, 8, 0.1);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .about-page .blog-post::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #e96308, #ff8c42, #e96308);
+    }
+
+    .about-page .blog-post:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    }
+
+    .about-page .blog-post h2 {
+      color: #2c1607;
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .about-page .blog-post h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 30px;
+      background: linear-gradient(135deg, #e96308, #ff8c42);
+      border-radius: 2px;
+    }
+
+    .about-page .blog-post h3 {
+      color: #e96308;
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      position: relative;
+      padding-left: 15px;
+    }
+
+    .about-page .blog-post h3::before {
+      content: '●';
+      position: absolute;
+      left: 0;
+      color: #e96308;
+      font-size: 1.2rem;
+    }
+
+    .about-page .blog-post h4 {
+      color: #342c26;
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      position: relative;
+      padding-left: 10px;
+    }
+
+    .about-page .blog-post h4::before {
+      content: '▶';
+      position: absolute;
+      left: 0;
+      color: #e96308;
+      font-size: 0.8rem;
+    }
+
+    .about-page .blog-post p {
+      color: #342c26;
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
+    }
+
+    .about-page .blog-post .lead {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #2c1607;
+    }
+
+    .about-page .blog-post ul, .about-page .blog-post ol {
+      padding-left: 25px;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-page .blog-post ul li {
+      color: #342c26;
+      line-height: 1.8;
+      margin-bottom: 0.8rem;
+      position: relative;
+    }
+
+    .about-page .blog-post ul li::marker {
+      color: #e96308;
+    }
+
+    .about-page .blog-post ol li {
+      color: #342c26;
+      line-height: 1.8;
+      margin-bottom: 0.8rem;
+    }
+
+    .about-page .blog-post strong {
+      color: #e96308;
+      font-weight: 600;
+    }
+
+    /* Enhanced Mission/Vision Cards */
+    .about-page .p-4.rounded-3 {
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
+      border: 2px solid rgba(233, 99, 8, 0.1);
+      border-radius: 20px !important;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-page .p-4.rounded-3::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #e96308, #ff8c42);
+    }
+
+    .about-page .p-4.rounded-3:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      border-color: rgba(233, 99, 8, 0.3);
+    }
+
+    .about-page .p-4.rounded-3 h3 {
+      color: #2c1607;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .about-page .p-4.rounded-3 h3::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 25px;
+      background: linear-gradient(135deg, #e96308, #ff8c42);
+      border-radius: 2px;
+    }
+
+    .about-page .p-4.rounded-3 p {
+      color: #342c26;
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+
+    .about-page .p-4.rounded-3 ul {
+      padding-left: 20px;
+    }
+
+    .about-page .p-4.rounded-3 ul li {
+      color: #342c26;
+      line-height: 1.7;
+      margin-bottom: 0.6rem;
+      position: relative;
+    }
+
+    .about-page .p-4.rounded-3 ul li::marker {
+      color: #e96308;
+    }
+
+    /* Enhanced Stats Grid */
+    .about-page .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin: 3rem 0;
+    }
+
+    .about-page .stat-item {
+      background: linear-gradient(135deg, #2c1607 0%, #342c26 100%);
+      color: white;
+      padding: 30px 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(44, 22, 7, 0.3);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-page .stat-item::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+      transform: rotate(45deg);
+      transition: all 0.6s ease;
+      opacity: 0;
+    }
+
+    .about-page .stat-item:hover::before {
+      opacity: 1;
+      animation: shine 0.6s ease-in-out;
+    }
+
+    @keyframes shine {
+      0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    }
+
+    .about-page .stat-item:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 15px 35px rgba(44, 22, 7, 0.4);
+    }
+
+    .about-page .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .about-page .stat-label {
+      font-size: 1rem;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+
+    /* Enhanced Content Sections */
+    .about-page .content {
+      position: relative;
+    }
+
+    .about-page .section-heading {
+      position: relative;
+      padding-bottom: 20px;
+    }
+
+    .about-page .section-heading::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, #e96308, #ff8c42);
+      border-radius: 2px;
+    }
+
+    .about-page .lead-text {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #2c1607;
+      line-height: 1.7;
+    }
+
+    .about-page .description-text {
+      font-size: 1.1rem;
+      color: #342c26;
+      line-height: 1.8;
+    }
+
+    /* Enhanced CTA Section */
+    .about-page .cta-section {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .about-page .cta-link {
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(135deg, #e96308 0%, #ff8c42 100%);
+      color: white;
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(233, 99, 8, 0.3);
+    }
+
+    .about-page .cta-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(233, 99, 8, 0.4);
+      color: white;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .about-page .blog-post {
+        padding: 25px;
+        margin-bottom: 20px;
+      }
+
+      .about-page .blog-post h2 {
+        font-size: 1.8rem;
+      }
+
+      .about-page .blog-post h3 {
+        font-size: 1.5rem;
+      }
+
+      .about-page .blog-post h4 {
+        font-size: 1.2rem;
+      }
+
+      .about-page .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .about-page .p-4.rounded-3 {
+        padding: 25px !important;
+      }
+    }
+
+    /* Animation Enhancements */
+    .about-page [data-aos] {
+      transition-duration: 0.8s;
+    }
+
+    .about-page .blog-post[data-aos] {
+      transition-delay: 0.1s;
+    }
+
+    /* Floating Elements Enhancement */
+    .about-page .floating-badge {
+      background: linear-gradient(135deg, #2c1607 0%, #342c26 100%);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 10px 25px rgba(44, 22, 7, 0.3);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .about-page .badge-content {
+      color: white;
+      text-align: center;
+    }
+
+    .about-page .badge-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .about-page .badge-subtitle {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+  </style>
+
   <!-- =======================================================
   * Template Name: iConstruction
   * Template URL: https://bootstrapmade.com/iconstruction-bootstrap-construction-template/
@@ -121,8 +506,10 @@
           <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right" data-aos-delay="200">
             <div class="content">
               <h2 class="section-heading mb-4">13 Yıllık Tecrübe ile Kaliteli Hizmet, Güvenilir Çözüm</h2>
-              <p class="lead-text mb-4">Gezgin Ustalar, 13 yıllık inşaat ve şantiye tecrübesiyle; kullanılan ve kullanılacak tüm yapı malzemelerine hakim, alanında deneyimli uygulamacı profesyonel ustalardan oluşan bir ekiptir.</p>
-              <p class="description-text mb-5">Bir çağrınızla yola çıkar, kısa sürede adresinize ulaşırız. Evinizi, ofisinizi veya binanızı baştan sona yenilerken planlı, temiz ve zamanında teslim prensibiyle çalışırız.</p>
+              <p class="lead-text mb-4">Gezgin Ustalar, 13 yıllık sektör deneyimiyle tadilat, tamirat, dekorasyon ve mantolama alanlarında İstanbul genelinde profesyonel çözümler sunar.</p>
+              <p class="description-text mb-4">Malzeme bilgisine hâkim, alanında uzman ustalarımızla; kaliteli işçilik, estetik uygulamalar ve zamanında teslim anlayışını bir araya getiriyoruz.</p>
+              <p class="description-text mb-4">Evinizi veya iş yerinizi yenilemek mi istiyorsunuz? Biz, ihtiyaçlarınıza en uygun çözümleri sunarak yaşam alanlarınızı konforlu, modern ve uzun ömürlü hale getiriyoruz.</p>
+              <p class="description-text mb-5">Dış cephe mantolama, boya ve sıva işleri, banyo ve mutfak tadilatı, zemin uygulamaları ve daha birçok hizmette güvenilir sonuçlar elde etmenizi sağlıyoruz. Her projeye özenle yaklaşır, doğru malzeme seçimi ve profesyonel işçilikle fark yaratırız. Müşteri memnuniyetini ön planda tutan anlayışımızla, sadece bugünü değil, geleceğinizi de düşünerek çalışıyoruz.</p>
 
               <div class="stats-grid">
                 <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
@@ -184,7 +571,7 @@
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="p-4 rounded-3" style="background: var(--surface-color);">
               <h3 class="mb-3">Vizyonumuz</h3>
-              <p>İstanbul’un dört bir yanında, güvenilir ve sürdürülebilir hizmet anlayışıyla tanınan lider tadilat ve dekorasyon markalarından biri olmak. Teknoloji, yenilik ve ustalığı bir araya getirerek yaşam alanlarını geleceğe taşımak.</p>
+              <p>İstanbul'un dört bir yanında, güvenilir ve sürdürülebilir hizmet anlayışıyla tanınan lider tadilat ve dekorasyon markalarından biri olmak. Her adımda teknoloji, yenilik ve ustalığı bir araya getirerek, yaşam alanlarını geleceğe taşımak.</p>
             </div>
           </div>
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="250">
@@ -200,6 +587,171 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Blog Content Section -->
+    <section id="blog-content" class="about section light-background">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        
+        <!-- Ev Dekorasyon Blog -->
+        <div class="row mb-5">
+          <div class="col-12">
+            <div class="blog-post" data-aos="fade-up" data-aos-delay="150">
+              <h2 class="mb-4">Ev Dekorasyon, Daire Boyama ve Mantolama Hizmetleri | 1+1'den 4+1'e Profesyonel Çözümler</h2>
+              <p class="lead mb-4">Evlerimiz, yaşam tarzımızın bir yansımasıdır. Zamanla değişen ihtiyaçlar, yıpranan yüzeyler ve yeni trendler; ev dekorasyonunda yeniliği kaçınılmaz kılar.</p>
+              <p class="mb-4">İster 1+1 küçük bir daire, ister 4+1 geniş bir aile evi olsun — biz, her ölçekte profesyonel boya, tadilat, mantolama ve yalıtım hizmetleri sunuyoruz.</p>
+              <p class="mb-5">Temiz çalışma prensibi, garantili işçilik ve zamanında teslim politikamızla, yaşam alanlarınıza konfor ve estetik kazandırıyoruz.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Daire Boyama Section -->
+        <div class="row mb-5">
+          <div class="col-12">
+            <div class="blog-post" data-aos="fade-up" data-aos-delay="200">
+              <h3 class="mb-4">Daire Boyama Hizmetleri: 1+1, 2+1, 3+1, 4+1</h3>
+              <p class="mb-4">Daire boyama, evinizin havasını değiştiren en etkili işlemlerden biridir. Her daire tipi için özel planlama ve boya uygulaması yapıyoruz.</p>
+              
+              <h4 class="mb-3">1+1 ve 2+1 Dairelerde Boya & Tavan Uygulamaları</h4>
+              <p class="mb-3">Küçük metrekareli evlerde doğru renk ve tavan boyası seçimi, mekanı daha geniş gösterir.</p>
+              <p class="mb-3">Uzman ekibimiz:</p>
+              <ul class="mb-4">
+                <li>Yüzey hazırlığı ve astar uygulaması yapar,</li>
+                <li>Kaliteli, silinebilir boya tercih eder,</li>
+                <li>Tavan boyasını kusursuz şekilde uygular,</li>
+                <li>İşlem sonunda ortamı temiz ve düzenli teslim eder.</li>
+              </ul>
+
+              <h4 class="mb-3">3+1 ve 4+1 Dairelerde Profesyonel Boya Hizmeti</h4>
+              <p class="mb-3">Geniş metrekareli dairelerde estetik ve dayanıklılık ön plandadır.</p>
+              <ul class="mb-4">
+                <li>Duvar çatlak onarımı ve macunlama işlemleri,</li>
+                <li>Dekoratif boya teknikleri,</li>
+                <li>Alçıpan tavan sistemleri, niş tasarımları ve aydınlatma uygulamalarıyla estetik çözümler sunarız.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dış Cephe Mantolama Section -->
+        <div class="row mb-5">
+          <div class="col-12">
+            <div class="blog-post" data-aos="fade-up" data-aos-delay="250">
+              <h3 class="mb-4">Dış Cephe Mantolama ve İzolasyon Hizmetleri</h3>
+              <p class="mb-4">Enerji tasarrufu ve konforlu yaşamın sırrı, kaliteli bir mantolama uygulamasıdır. Dış cephe mantolama, binalarda ısı kaybını azaltırken aynı zamanda cephe estetiğini artırır.</p>
+              
+              <h4 class="mb-3">Asma İskele, Boya & Tamirat Hizmetleri ile Cephe Yenileme</h4>
+              <p class="mb-3">Firmamız; bina dış cephe tadilatı sırasında;</p>
+              <ul class="mb-4">
+                <li>Asma iskele ile tamir tadilat işlerinden</li>
+                <li>Mastik silikon çekim tamiratına,</li>
+                <li>Cephe boya uygulamasına,</li>
+                <li>Basınçlı yıkama ile cephe temizliğine kadar tüm işlemleri koordineli ve profesyonel biçimde yürütür.</li>
+              </ul>
+
+              <h4 class="mb-3">Hizmetlerimiz ve Neden Biz?</h4>
+              <ul class="mb-4">
+                <li>Dış cephe & bina cephe mantolama işlemlerinde en yeni yalıtım sistemlerini kullanırız.</li>
+                <li>Tamir tadilat ve boya onarımları, çatlak tamiri, sıva yenileme, yüzey düzeltme ile kusursuz hale gelir.</li>
+                <li>Asma iskele ile çalışma ile güven ve hız sağlanır.</li>
+                <li>Mastik silikon çekimi tamiri ile cephe birleşim noktalarındaki su sızmaları giderilir.</li>
+                <li>Cephe boyama ve cephe yıkama (basınçlı yıkama) ile dış yüzeyler hem temizlenir hem yenilenir.</li>
+              </ul>
+
+              <h4 class="mb-3">Mantolama ve Onarım Uygulamaları</h4>
+              <p class="mb-3">Mevcut mantolama yüzeyinde oluşan kabarma, çatlak veya boya dökülmeleri varsa mantolama onarımı hizmetimiz devreye girer. Yüzey yenileme sonrası, cephe boya uygulamaları ile binanızın görünümünü tamamen yenileriz.</p>
+
+              <h4 class="mb-3">Isı, Su ve Ses Yalıtımı</h4>
+              <ul class="mb-4">
+                <li><strong>Isı yalıtımı:</strong> Yakıt giderlerini düşürür, ısı kaybını önler.</li>
+                <li><strong>Su yalıtımı:</strong> Nem, rutubet ve küf oluşumunu engeller.</li>
+                <li><strong>Ses yalıtımı:</strong> Daireler arası ses geçişini azaltır, sessiz yaşam alanı sağlar.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Su Yalıtımı Section -->
+        <div class="row mb-5">
+          <div class="col-12">
+            <div class="blog-post" data-aos="fade-up" data-aos-delay="300">
+              <h3 class="mb-4">Su Yalıtımı Nasıl Yapılır?</h3>
+              <p class="mb-4">Yapı sahiplerinin en çok merak ettiği konu: su yalıtımı nasıl yapılır?</p>
+              <p class="mb-3">Bu sorunun cevabında:</p>
+              <ol class="mb-4">
+                <li><strong>Yüzey hazırlığı:</strong> Eski boya, gevşek kısımlar ve toz temizlenir.</li>
+                <li><strong>Astar uygulamasıyla</strong> yüzeyin emiciliği dengelenir.</li>
+                <li><strong>Seçilen su yalıtım malzemesi</strong> (çimento esaslı, poliüretan, bitüm esaslı vb.) kat kat uygulanır.</li>
+                <li><strong>Derzler, köşe detayları ve geçiş noktaları</strong> mastik silikon çekimi ile detaylandırılır.</li>
+                <li><strong>Kuruma süresi sonrası</strong> kaplama ya da üst katman koruyucu boya ile tamamlanır.</li>
+              </ol>
+
+              <h4 class="mb-3">Su Yalıtımında Dikkat Edilmesi Gereken Noktalar</h4>
+              <ul class="mb-4">
+                <li><strong>Malzeme seçimi:</strong> Çimento esaslı, likit membran, poliüretan, bitüm esaslı sistemler gibi farklı tipler vardır.</li>
+                <li><strong>Derz ve geçiş detayları:</strong> Duvardan terasa veya duvara geçiş gibi noktalarda mastik silikon çekimi ile su geçirmezlik sağlanmalı.</li>
+                <li><strong>Profesyonel uygulama:</strong> Yanlış yapılan bir uygulama kısa sürede yıpranma ve tekrar onarım gereksinimi doğurur.</li>
+                <li><strong>Garanti ve işçilik:</strong> Uygulama sonrasında garanti veren ve temiz çalışma prensibini benimseyen firmalar tercih edilmelidir.</li>
+                <li><strong>Kuruma süresi ve test:</strong> Uygulama tamamlandıktan sonra su testi yapılmalı; kuruma süresine mutlaka uyulmalı.</li>
+              </ul>
+              <p class="mb-4">Su yalıtımı, evlerinizin ömrünü uzatan ve sizi ileride karşılaşılabilecek nem, küf ve su sızıntılarıyla oluşabilecek maliyetlerden koruyan kritik bir hizmettir.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- İç Mekan Tadilat Section -->
+        <div class="row mb-5">
+          <div class="col-12">
+            <div class="blog-post" data-aos="fade-up" data-aos-delay="350">
+              <h3 class="mb-4">İç Mekan Tadilat ve Dekorasyon Hizmetleri</h3>
+              <p class="mb-4">Ev dekorasyonu sadece estetik değil, aynı zamanda fonksiyonellik ister. Profesyonel tadilat ekibimizle tüm dairelerde anahtar teslim çözümler sunuyoruz.</p>
+              
+              <h4 class="mb-3">Alçıpan Tavan Sistemleri</h4>
+              <p class="mb-4">Modern iç mekan tasarımlarında alçıpan tavan sistemleri, LED aydınlatmalar ve gizli niş detaylarıyla fark yaratır.</p>
+
+              <h4 class="mb-3">Parke Döşeme Ustası Hizmeti</h4>
+              <p class="mb-4">Yüzey düzeltme, süpürgelik montajı ve laminat parke uygulamalarında uzman ekibimizle kusursuz sonuçlar sunuyoruz.</p>
+
+              <h4 class="mb-3">Banyo ve Mutfak Yenileme</h4>
+              <ul class="mb-4">
+                <li>Seramik ve fayans uygulamaları,</li>
+                <li>Tesisat yenileme,</li>
+                <li>Dolap, tezgah ve armatür değişimleri,</li>
+                <li>Suya dayanıklı boya ve silikon detaylarıyla uzun ömürlü yenileme hizmetleri sağlıyoruz.</li>
+              </ul>
+
+              <h4 class="mb-3">TV Ünitesi ve Niş Tasarımı</h4>
+              <p class="mb-4">Salon veya oturma odasında şık, modern ve işlevsel TV ünitesi ve niş tasarımları ile yaşam alanlarınızı güzelleştiriyoruz.</p>
+
+              <h4 class="mb-3">Karot Delme, Cephe Boya ve Söve Tadilatı</h4>
+              <ul class="mb-4">
+                <li>Karot delme ve kesme işlemleriyle tesisat geçişleri profesyonelce açılır,</li>
+                <li>Cephe boya uygulamaları ile estetik görünüm sağlanır,</li>
+                <li>Söve tadilatı ile dış cephede zarif detaylar oluşturulur.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profesyonel Hizmet Section -->
+        <div class="row mb-5">
+          <div class="col-12">
+            <div class="blog-post" data-aos="fade-up" data-aos-delay="400">
+              <h3 class="mb-4">Profesyonel, Garantili ve Zamanında Teslim Hizmet</h3>
+              <p class="mb-4">Tüm çalışmalarımızda üç temel ilkemiz vardır:</p>
+              <ol class="mb-4">
+                <li><strong>Profesyonel ekip çalışması</strong> – Deneyimli ustalar ve mühendis kontrolü</li>
+                <li><strong>Garantili işçilik</strong> – Her işlem sözleşme ile güvence altına alınır</li>
+                <li><strong>Temiz çalışma prensibi</strong> – Eşyalarınız korunur, iş bitiminde ortam tertemiz teslim edilir</li>
+              </ol>
+              <p class="mb-4">Zamanında teslim prensibimizle projeleriniz planlandığı tarihte tamamlanır. Müşteri memnuniyeti, bizim için en önemli başarı ölçüsüdür.</p>
+              <p class="mb-4">Her projede; kaliteli malzeme, deneyimli ekip ve titiz işçilik ile evinizi yenilemenin en kolay ve güvenli yoluyuz.</p>
+              <p class="mb-0"><strong>Gezgin Ustalar – Tecrübe, güven ve kaliteli hizmetin birleştiği adres.</strong></p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
