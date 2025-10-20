@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  
+  <!-- Main Page Videos -->
+  <url>
+    <loc>https://www.gezginustalar.com/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://www.gezginustalar.com/static/logo.jpg</video:thumbnail_loc>
+      <video:title>Gezgin Ustalar Ev Dekorasyon Tadilat Hizmetleri Video</video:title>
+      <video:description>Gezgin Ustalar ev dekorasyon ve tadilat hizmetleri tanıtım videosu</video:description>
+      <video:content_loc>https://www.gezginustalar.com/static/WhatsApp%20Video%202025-10-15%20at%2011.12.56%20PM.mp4</video:content_loc>
+      <video:player_loc allow_embed="yes" autoplay="autoplay=1">https://www.gezginustalar.com/static/WhatsApp%20Video%202025-10-15%20at%2011.12.56%20PM.mp4</video:player_loc>
+      <video:duration>30</video:duration>
+      <video:publication_date>2025-01-16</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://www.gezginustalar.com/static/logo.jpg</video:thumbnail_loc>
+      <video:title>Gezgin Ustalar Dış Cephe Mantolama İzolasyon Hizmetleri Video</video:title>
+      <video:description>Gezgin Ustalar dış cephe mantolama ve izolasyon hizmetleri tanıtım videosu</video:description>
+      <video:content_loc>https://www.gezginustalar.com/static/WhatsApp%20Video%202025-10-15%20at%2011.13.10%20PM.mp4</video:content_loc>
+      <video:player_loc allow_embed="yes" autoplay="autoplay=1">https://www.gezginustalar.com/static/WhatsApp%20Video%202025-10-15%20at%2011.13.10%20PM.mp4</video:player_loc>
+      <video:duration>30</video:duration>
+      <video:publication_date>2025-01-16</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  
+</urlset>

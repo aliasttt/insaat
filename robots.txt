@@ -1,19 +1,22 @@
+# Robots.txt for Gezgin Ustalar
+# https://www.gezginustalar.com
+
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://gezginustalar.com/sitemap.xml
+# Sitemaps
+Sitemap: https://www.gezginustalar.com/sitemap-index.xml
+Sitemap: https://www.gezginustalar.com/sitemap.xml
+Sitemap: https://www.gezginustalar.com/sitemap-images.xml
+Sitemap: https://www.gezginustalar.com/sitemap-videos.xml
 
-# Crawl-delay
+# Crawl-delay for all bots
 Crawl-delay: 1
 
-# Allow all images and videos
+# Allow all static content
 Allow: /static/
 Allow: /assets/
-
-# Disallow admin areas (if any)
-Disallow: /admin/
-Disallow: /private/
+Allow: /forms/
 
 # Allow specific file types
 Allow: /*.jpg$
@@ -23,6 +26,42 @@ Allow: /*.gif$
 Allow: /*.webp$
 Allow: /*.mp4$
 Allow: /*.webm$
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.pdf$
 
-# Host
-Host: https://gezginustalar.com
+# Disallow admin areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+
+# Disallow query parameters that don't add value
+Disallow: /*?*
+Disallow: /*&*
+
+# Allow important pages
+Allow: /index.html
+Allow: /about.html
+Allow: /services.html
+Allow: /gallery.html
+Allow: /contact.html
+Allow: /blog.html
+Allow: /projects.html
+Allow: /quote.html
+
+# Host directive
+Host: https://www.gezginustalar.com
+
+# Additional directives for better SEO
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
