@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Tanıtım Bloğu - Gezgin Ustalar | Hızlı Hizmet • Garantili İşçilik • Uygun Fiyat</title>
-  <meta name="description" content="Gezgin Ustalar tanıtım bloğu - 13 yıllık inşaat ve şantiye tecrübesiyle profesyonel uygulamacı ustalardan oluşan ekip. İstanbul genelinde tadilat, tamirat, mantolama, izolasyon ve dekorasyon hizmetleri.">
-  <meta name="keywords" content="gezgin ustalar tanıtım, profesyonel usta ekibi, inşaat tecrübesi, şantiye deneyimi, yapı malzemeleri, tadilat hizmetleri, tamirat hizmetleri, mantolama, izolasyon, dekorasyon">
+  <title>Hakkımızda - Gezgin Ustalar | 13 Yıllık Tecrübe • Profesyonel Usta Ekibi • Kaliteli Hizmet</title>
+  <meta name="description" content="Gezgin Ustalar hakkında - 13 yıllık inşaat ve şantiye tecrübesiyle, tüm yapı malzemelerine hakim profesyonel usta ekibi. İstanbul genelinde tadilat, tamirat, mantolama, izolasyon ve dekorasyon hizmetleri. Misyon, vizyon ve hizmet detayları.">
+  <meta name="keywords" content="gezgin ustalar hakkında, 13 yıllık tecrübe, profesyonel usta ekibi, inşaat şantiye deneyimi, yapı malzemeleri uzmanı, tadilat tamirat hizmetleri, mantolama izolasyon, dekorasyon hizmetleri, daire boyama, dış cephe mantolama, su yalıtımı, ısı yalıtımı, alçıpan tavan, parke döşeme, banyo mutfak yenileme">
   
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Tanıtım Bloğu - Gezgin Ustalar">
-  <meta property="og:description" content="13 yıllık inşaat ve şantiye tecrübesiyle profesyonel uygulamacı ustalardan oluşan ekip. Hızlı hizmet, garantili işçilik, uygun fiyat.">
+  <meta property="og:title" content="Hakkımızda - Gezgin Ustalar">
+  <meta property="og:description" content="13 yıllık inşaat ve şantiye tecrübesiyle, tüm yapı malzemelerine hakim profesyonel usta ekibi. İstanbul genelinde tadilat, tamirat, mantolama, izolasyon ve dekorasyon hizmetleri.">
   <meta property="og:image" content="https://gezginustalar.com/static/logo.jpg">
   <meta property="og:url" content="https://gezginustalar.com/blog.html">
   <meta property="og:type" content="article">
@@ -37,11 +37,15 @@
 
   <!-- Blog Custom Styles -->
   <style>
+    /* Hero Section with Advanced Animations */
     .blog-hero {
-      background: linear-gradient(135deg, #e96308 0%, #ff8c42 100%);
+      background: linear-gradient(135deg, #e96308 0%, #ff8c42 50%, #ff6b35 100%);
       padding: 120px 0 80px;
       position: relative;
       overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
     }
 
     .blog-hero::before {
@@ -52,8 +56,14 @@
       right: 0;
       bottom: 0;
       background: url('static/WhatsApp Image 2025-10-18 at 12.24.56 PM.jpeg') center/cover;
-      opacity: 0.1;
+      opacity: 0.15;
       z-index: 1;
+      animation: backgroundMove 20s ease-in-out infinite;
+    }
+
+    @keyframes backgroundMove {
+      0%, 100% { transform: scale(1) rotate(0deg); }
+      50% { transform: scale(1.05) rotate(1deg); }
     }
 
     .blog-hero .container {
@@ -62,240 +72,700 @@
     }
 
     .blog-hero h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
+      font-size: 4rem;
+      font-weight: 800;
       color: white;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      margin-bottom: 1.5rem;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+      animation: titleFloat 3s ease-in-out infinite;
+      background: linear-gradient(45deg, #fff, #f0f0f0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    @keyframes titleFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
     }
 
     .blog-hero .subtitle {
-      font-size: 1.5rem;
-      color: rgba(255,255,255,0.9);
+      font-size: 1.8rem;
+      color: rgba(255,255,255,0.95);
       margin-bottom: 2rem;
-      font-weight: 300;
+      font-weight: 400;
+      animation: slideInUp 1s ease-out 0.5s both;
     }
 
     .blog-hero .tagline {
-      font-size: 1.1rem;
-      color: rgba(255,255,255,0.8);
+      font-size: 1.3rem;
+      color: rgba(255,255,255,0.9);
       margin-bottom: 0;
+      animation: slideInUp 1s ease-out 0.8s both;
+      font-style: italic;
     }
 
-    .blog-content {
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Section Backgrounds with Different Colors */
+    .section-intro {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
       padding: 80px 0;
-      background: #f9f7f6;
+      position: relative;
     }
 
-    .blog-article {
-      background: white;
-      border-radius: 20px;
-      padding: 60px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-      margin-bottom: 40px;
+    .section-intro::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23e96308" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23e96308" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23e96308" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      opacity: 0.3;
     }
 
-    .blog-article h2 {
-      font-size: 2.5rem;
-      font-weight: 600;
+    .section-mission {
+      background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .section-services {
+      background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .section-technical {
+      background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .section-interior {
+      background: linear-gradient(135deg, #fff3e0 0%, #ffcc80 100%);
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .section-guarantee {
+      background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .section-keywords {
+      background: linear-gradient(135deg, #f1f8e9 0%, #dcedc8 100%);
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .section-logo {
+      background: linear-gradient(135deg, #2c1607 0%, #4a2c17 100%);
+      padding: 80px 0;
+      position: relative;
+      color: white;
+    }
+
+    /* Content Cards with Advanced Styling */
+    .content-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 25px;
+      padding: 50px;
+      margin: 40px 0;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .content-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+      transition: left 0.5s;
+    }
+
+    .content-card:hover::before {
+      left: 100%;
+    }
+
+    .content-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 35px 70px rgba(0,0,0,0.15);
+    }
+
+    .content-card h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
       color: #2c1607;
       margin-bottom: 2rem;
       text-align: center;
+      position: relative;
+      animation: fadeInUp 1s ease-out;
     }
 
-    .blog-article .intro-text {
-      font-size: 1.3rem;
-      line-height: 1.8;
-      color: #342c26;
-      margin-bottom: 3rem;
-      text-align: center;
-      font-weight: 300;
-    }
-
-    .blog-article .content-section {
-      margin-bottom: 3rem;
-    }
-
-    .blog-article .content-section h3 {
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: #e96308;
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-
-    .blog-article .content-section h3::before {
+    .content-card h2::after {
       content: '';
-      width: 4px;
-      height: 30px;
-      background: #e96308;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(45deg, #e96308, #ff8c42);
       border-radius: 2px;
     }
 
-    .blog-article .content-section p {
-      font-size: 1.1rem;
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .content-card .intro-text {
+      font-size: 1.4rem;
+      line-height: 1.8;
+      color: #342c26;
+      margin-bottom: 3rem;
+      text-align: center;
+      font-weight: 400;
+      animation: fadeInUp 1s ease-out 0.2s both;
+    }
+
+    .content-section {
+      margin-bottom: 4rem;
+      animation: slideInLeft 1s ease-out;
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .content-section h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #e96308;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+    }
+
+    .content-section h3::before {
+      content: '';
+      width: 6px;
+      height: 40px;
+      background: linear-gradient(45deg, #e96308, #ff8c42);
+      border-radius: 3px;
+      box-shadow: 0 0 10px rgba(233, 99, 8, 0.3);
+    }
+
+    .content-section h3 i {
+      font-size: 2.5rem;
+      color: #e96308;
+      animation: iconPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes iconPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    .content-section h4 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #2c1607;
+      margin: 2.5rem 0 1.5rem 0;
+      padding: 15px 25px;
+      border-left: 5px solid #e96308;
+      background: linear-gradient(90deg, rgba(233, 99, 8, 0.1), transparent);
+      border-radius: 0 10px 10px 0;
+      position: relative;
+      animation: slideInRight 1s ease-out;
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .content-section p {
+      font-size: 1.2rem;
       line-height: 1.8;
       color: #342c26;
       margin-bottom: 1.5rem;
+      animation: fadeIn 1s ease-out;
+      position: relative;
     }
 
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .content-section p:first-of-type {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #2c1607;
+    }
+
+    .content-section ul, .content-section ol {
+      margin: 1.5rem 0;
+      padding-left: 2.5rem;
+      animation: slideInUp 1s ease-out;
+    }
+
+    .content-section li {
+      margin-bottom: 0.8rem;
+      color: #342c26;
+      line-height: 1.7;
+      font-size: 1.1rem;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .content-section li::before {
+      content: '✓';
+      position: absolute;
+      left: -2rem;
+      color: #e96308;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .content-section li:hover {
+      color: #e96308;
+      transform: translateX(10px);
+    }
+
+    /* Highlight Box with Advanced Styling */
     .highlight-box {
-      background: linear-gradient(135deg, #e96308 0%, #ff8c42 100%);
+      background: linear-gradient(135deg, #e96308 0%, #ff8c42 50%, #ff6b35 100%);
       color: white;
-      padding: 40px;
-      border-radius: 15px;
-      margin: 3rem 0;
+      padding: 50px;
+      border-radius: 25px;
+      margin: 4rem 0;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(233, 99, 8, 0.3);
+      animation: highlightPulse 3s ease-in-out infinite;
+    }
+
+    @keyframes highlightPulse {
+      0%, 100% { box-shadow: 0 20px 40px rgba(233, 99, 8, 0.3); }
+      50% { box-shadow: 0 25px 50px rgba(233, 99, 8, 0.4); }
+    }
+
+    .highlight-box::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      animation: rotate 10s linear infinite;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
 
     .highlight-box h4 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 2;
     }
 
     .highlight-box p {
-      font-size: 1.1rem;
-      margin-bottom: 0;
-      opacity: 0.9;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      opacity: 0.95;
+      position: relative;
+      z-index: 2;
     }
 
+    /* Features Grid with Advanced Cards */
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin: 3rem 0;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      margin: 4rem 0;
     }
 
     .feature-card {
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
       text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(233, 99, 8, 0.1);
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(45deg, #e96308, #ff8c42);
     }
 
     .feature-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      transform: translateY(-15px) scale(1.05);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.2);
     }
 
     .feature-card .icon {
-      width: 80px;
-      height: 80px;
+      width: 100px;
+      height: 100px;
       background: linear-gradient(135deg, #e96308 0%, #ff8c42 100%);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 20px;
-      font-size: 2rem;
+      margin: 0 auto 25px;
+      font-size: 2.5rem;
       color: white;
+      box-shadow: 0 10px 25px rgba(233, 99, 8, 0.3);
+      animation: iconFloat 3s ease-in-out infinite;
+    }
+
+    @keyframes iconFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
     }
 
     .feature-card h4 {
-      font-size: 1.3rem;
-      font-weight: 600;
+      font-size: 1.5rem;
+      font-weight: 700;
       color: #2c1607;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
 
     .feature-card p {
       color: #342c26;
-      line-height: 1.6;
+      line-height: 1.7;
+      font-size: 1.1rem;
     }
 
+    /* CTA Section with Advanced Styling */
     .cta-section {
-      background: transparent;
+      background: linear-gradient(135deg, rgba(233, 99, 8, 0.1) 0%, rgba(255, 140, 66, 0.1) 100%);
       color: #2c1607;
-      padding: 60px;
-      border-radius: 20px;
+      padding: 80px;
+      border-radius: 30px;
       text-align: center;
-      margin-top: 3rem;
-      border: 2px solid rgba(233, 99, 8, 0.2);
-      transition: all 0.3s ease;
+      margin-top: 4rem;
+      border: 3px solid rgba(233, 99, 8, 0.2);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, transparent, rgba(233, 99, 8, 0.05), transparent);
+      animation: shimmer 3s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+      0%, 100% { transform: translateX(-100%); }
+      50% { transform: translateX(100%); }
     }
 
     .cta-section:hover {
       border-color: rgba(233, 99, 8, 0.4);
-      box-shadow: 0 10px 30px rgba(233, 99, 8, 0.1);
+      box-shadow: 0 20px 40px rgba(233, 99, 8, 0.2);
+      transform: translateY(-5px);
     }
 
     .cta-section h3 {
-      font-size: 2.2rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 2;
     }
 
     .cta-section p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
+      font-size: 1.3rem;
+      margin-bottom: 2.5rem;
       color: #342c26;
       opacity: 0.9;
+      position: relative;
+      z-index: 2;
     }
 
     .cta-buttons {
       display: flex;
-      gap: 20px;
+      gap: 25px;
       justify-content: center;
       flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
     }
 
     .cta-buttons .btn {
-      padding: 15px 30px;
-      font-size: 1.1rem;
+      padding: 18px 35px;
+      font-size: 1.2rem;
       font-weight: 600;
       border-radius: 50px;
       text-decoration: none;
-      transition: all 0.3s ease;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-buttons .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s;
+    }
+
+    .cta-buttons .btn:hover::before {
+      left: 100%;
     }
 
     .cta-buttons .btn-primary {
-      background: #e96308;
+      background: linear-gradient(45deg, #e96308, #ff8c42);
       color: white;
       border: 2px solid #e96308;
+      box-shadow: 0 10px 25px rgba(233, 99, 8, 0.3);
     }
 
     .cta-buttons .btn-primary:hover {
-      background: #d55a07;
-      border-color: #d55a07;
-      transform: translateY(-2px);
+      background: linear-gradient(45deg, #d55a07, #e67e22);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 15px 35px rgba(233, 99, 8, 0.4);
     }
 
     .cta-buttons .btn-outline {
       background: transparent;
-      color: white;
-      border: 2px solid white;
+      color: #e96308;
+      border: 2px solid #e96308;
     }
 
     .cta-buttons .btn-outline:hover {
-      background: white;
-      color: #2c1607;
-      transform: translateY(-2px);
+      background: #e96308;
+      color: white;
+      transform: translateY(-3px) scale(1.05);
     }
 
+    /* Logo Section Styling */
+    .logo-showcase {
+      background: linear-gradient(135deg, #2c1607 0%, #4a2c17 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo-showcase::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(233, 99, 8, 0.1) 0%, transparent 70%);
+      animation: float 8s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-30px) rotate(180deg); }
+    }
+
+    .logo-container {
+      position: relative;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      background: white;
+      padding: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .logo-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, #e96308, #ff8c42, #e96308);
+      border-radius: 30px;
+      z-index: -1;
+      animation: gradient-shift 4s ease-in-out infinite;
+    }
+
+    @keyframes gradient-shift {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 1; }
+    }
+
+    .logo-container:hover {
+      transform: translateY(-15px) scale(1.05);
+      box-shadow: 0 35px 70px rgba(233, 99, 8, 0.4);
+    }
+
+    .logo-image {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 20px;
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      display: block;
+      max-height: 400px;
+    }
+
+    .logo-container:hover .logo-image {
+      transform: scale(1.08);
+      filter: brightness(1.1) contrast(1.1);
+    }
+
+    .logo-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(233, 99, 8, 0.95) 0%, rgba(255, 140, 66, 0.9) 100%);
+      padding: 30px;
+      color: white;
+      opacity: 0;
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .logo-container:hover .logo-overlay {
+      opacity: 1;
+    }
+
+    .logo-overlay h3 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 15px;
+      text-shadow: 0 3px 6px rgba(0,0,0,0.3);
+      animation: textGlow 2s ease-in-out infinite;
+    }
+
+    @keyframes textGlow {
+      0%, 100% { text-shadow: 0 3px 6px rgba(0,0,0,0.3); }
+      50% { text-shadow: 0 3px 6px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.5); }
+    }
+
+    .logo-overlay p {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+      opacity: 0.95;
+      line-height: 1.6;
+    }
+
+    /* Responsive Design */
     @media (max-width: 768px) {
       .blog-hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
       }
       
-      .blog-article {
-        padding: 40px 30px;
+      .content-card {
+        padding: 30px 20px;
+        margin: 20px 0;
       }
       
-      .blog-article h2 {
-        font-size: 2rem;
+      .content-card h2 {
+        font-size: 2.2rem;
+      }
+      
+      .content-section h3 {
+        font-size: 1.6rem;
+      }
+      
+      .content-section h4 {
+        font-size: 1.3rem;
+        padding: 12px 20px;
       }
       
       .cta-buttons {
         flex-direction: column;
         align-items: center;
+      }
+      
+      .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+      }
+      
+      .logo-container {
+        max-width: 100%;
+        margin: 0 15px;
+      }
+      
+      .logo-image {
+        max-height: 300px;
       }
     }
 
@@ -469,70 +939,213 @@
       <div class="container" data-aos="fade-up">
         <div class="row justify-content-center text-center">
           <div class="col-lg-10">
-            <h1 data-aos="fade-up" data-aos-delay="200">Tanıtım Bloğu</h1>
-            <p class="subtitle" data-aos="fade-up" data-aos-delay="300">Hızlı Hizmet • Garantili İşçilik • Uygun Fiyat</p>
-            <p class="tagline" data-aos="fade-up" data-aos-delay="400">Gezgin Ustalar ile tanışın</p>
+            <h1 data-aos="fade-up" data-aos-delay="200">Hakkımızda – Gezgin Ustalar</h1>
+            <p class="subtitle" data-aos="fade-up" data-aos-delay="300">13 Yıllık Tecrübe • Profesyonel Usta Ekibi • Kaliteli Hizmet</p>
+            <p class="tagline" data-aos="fade-up" data-aos-delay="400">Tecrübe, güven ve kaliteli hizmetin birleştiği adres</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Blog Content Section -->
-    <section class="blog-content">
+    <!-- Company Introduction Section -->
+    <section class="section-intro">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-10">
-            
-            <article class="blog-article" data-aos="fade-up">
-              <h2>Gezgin Ustalar Ekibi</h2>
-              <p class="intro-text">13 yıllık inşaat ve şantiye tecrübesiyle, kullanılan ve kullanılacak tüm yapı malzemelerine hakim, alanında deneyimli uygulamacı profesyonel ustalardan oluşan bir ekiptir.</p>
+            <div class="content-card" data-aos="fade-up">
+              <h2><i class="bi bi-building"></i> Gezgin Ustalar</h2>
+              <p class="intro-text">Gezgin Ustalar, 13 yıllık inşaat ve şantiye tecrübesiyle, kullanılan ve kullanılacak tüm yapı malzemelerine hakim, alanında deneyimli uygulamacı profesyonel ustalardan oluşan bir ekiptir.</p>
+              <p class="intro-text">İstanbul genelinde tadilat, tamirat, mantolama, izolasyon ve dekorasyon alanlarında güvenilir, kaliteli ve garantili hizmet sunuyoruz.</p>
+              <p class="intro-text">Bir çağrınızla yola çıkar, kısa sürede adresinize ulaşırız. Alanında uzman kadromuzla, evinizi, ofisinizi veya binanızı baştan sona yenilerken planlı, temiz ve zamanında teslim prensibiyle çalışırız.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Mission & Vision Section -->
+    <section class="section-mission">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="content-card" data-aos="fade-up">
               <div class="content-section" data-aos="fade-up" data-aos-delay="200">
-                <h3>Hizmet Alanlarımız</h3>
-                <p>İstanbul genelinde tadilat, tamirat, mantolama, izolasyon ve dekorasyon alanlarında güvenilir, kaliteli ve garantili hizmet sunuyoruz.</p>
-                <p>Bir çağrınızla yola çıkar, kısa sürede adresinize ulaşırız.</p>
+                <h3><i class="bi bi-bullseye"></i> Misyonumuz</h3>
+                <p>Müşteri memnuniyetini en üst seviyede tutarak; estetik, fonksiyonel ve uzun ömürlü yaşam alanları oluşturmak.</p>
+                <p>Her projede kaliteli malzeme, profesyonel işçilik ve doğru planlama ile fark yaratmak.</p>
               </div>
 
-              <div class="highlight-box" data-aos="fade-up" data-aos-delay="300">
-                <h4>Profesyonel Yaklaşım</h4>
-                <p>Alanında uzman kadromuzla, evinizi, ofisinizi veya binanızı baştan sona yenilerken planlı, temiz ve zamanında teslim prensibiyle çalışırız.</p>
+              <div class="content-section" data-aos="fade-up" data-aos-delay="300">
+                <h3><i class="bi bi-eye"></i> Vizyonumuz</h3>
+                <p>İstanbul'un dört bir yanında, güvenilir ve sürdürülebilir hizmet anlayışıyla tanınan lider tadilat ve dekorasyon markalarından biri olmak.</p>
+                <p>Her adımda teknoloji, yenilik ve ustalığı bir araya getirerek, yaşam alanlarını geleceğe taşımak.</p>
               </div>
 
-              <div class="features-grid" data-aos="fade-up" data-aos-delay="400">
-                <div class="feature-card">
-                  <div class="icon">
-                    <i class="bi bi-lightning-charge"></i>
+              <div class="highlight-box" data-aos="fade-up" data-aos-delay="400">
+                <h4><i class="bi bi-star-fill"></i> Neden Gezgin Ustalar?</h4>
+                <p>• 13 yıllık sektör deneyimi</p>
+                <p>• Malzeme bilgisine sahip uzman ustalar</p>
+                <p>• Tadilat, tamirat, dekorasyon ve mantolama çözümleri tek çatı altında</p>
+                <p>• Temiz çalışma prensibi ve garantili işçilik</p>
+                <p>• Zamanında teslim ve müşteri odaklı hizmet</p>
+                <p>Her projede; kaliteli malzeme, deneyimli ekip ve titiz işçilik ile evinizi yenilemenin en kolay ve güvenli yoluyuz.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section-services">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="content-card" data-aos="fade-up">
+              <div class="content-section" data-aos="fade-up" data-aos-delay="200">
+                <h3><i class="bi bi-house-door"></i> Ev Dekorasyon, Daire Boyama ve Mantolama Hizmetleri | 1+1'den 4+1'e Profesyonel Çözümler</h3>
+                <p>Evlerimiz, yaşam tarzımızın bir yansımasıdır. Zamanla değişen ihtiyaçlar, yıpranan yüzeyler ve yeni trendler; ev dekorasyonunda yeniliği kaçınılmaz kılar.</p>
+                <p>İster 1+1 küçük bir daire, ister 4+1 geniş bir aile evi olsun — biz, her ölçekte profesyonel boya, tadilat, mantolama ve yalıtım hizmetleri sunuyoruz.</p>
+                <p>Temiz çalışma prensibi, garantili işçilik ve zamanında teslim politikamızla, yaşam alanlarınıza konfor ve estetik kazandırıyoruz.</p>
+              </div>
+
+              <div class="content-section" data-aos="fade-up" data-aos-delay="300">
+                <h3><i class="bi bi-paint-bucket"></i> Daire Boyama Hizmetleri: 1+1, 2+1, 3+1, 4+1</h3>
+                <p>Daire boyama, evinizin havasını değiştiren en etkili işlemlerden biridir. Her daire tipi için özel planlama ve boya uygulaması yapıyoruz.</p>
+                
+                <h4><i class="bi bi-house"></i> 1+1 ve 2+1 Dairelerde Boya & Tavan Uygulamaları</h4>
+                <p>Küçük metrekareli evlerde doğru renk ve tavan boyası seçimi, mekanı daha geniş gösterir.</p>
+                <p>Uzman ekibimiz:</p>
+                <p>• Yüzey hazırlığı ve astar uygulaması yapar,</p>
+                <p>• Kaliteli, silinebilir boya tercih eder,</p>
+                <p>• Tavan boyasını kusursuz şekilde uygular,</p>
+                <p>• İşlem sonunda ortamı temiz ve düzenli teslim eder.</p>
+
+                <h4><i class="bi bi-building"></i> 3+1 ve 4+1 Dairelerde Profesyonel Boya Hizmeti</h4>
+                <p>Geniş metrekareli dairelerde estetik ve dayanıklılık ön plandadır.</p>
+                <p>• Duvar çatlak onarımı ve macunlama işlemleri,</p>
+                <p>• Dekoratif boya teknikleri,</p>
+                <p>• Alçıpan tavan sistemleri, niş tasarımları ve aydınlatma uygulamalarıyla estetik çözümler sunarız.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Services Section -->
+    <section class="section-technical">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="content-card" data-aos="fade-up">
+              <div class="content-section" data-aos="fade-up" data-aos-delay="200">
+                <h3><i class="bi bi-thermometer-half"></i> Dış Cephe Mantolama ve İzolasyon Hizmetleri</h3>
+                <p>Enerji tasarrufu ve konforlu yaşamın sırrı, kaliteli bir mantolama uygulamasıdır. Dış cephe mantolama, binalarda ısı kaybını azaltırken aynı zamanda cephe estetiğini artırır.</p>
+                
+                <h4><i class="bi bi-ladder"></i> Asma İskele, Boya & Tamirat Hizmetleri ile Cephe Yenileme</h4>
+                <p>Firmamız; bina dış cephe tadilatı sırasında;</p>
+                <p>• Asma iskele ile tamir tadilat işlerinden</p>
+                <p>• Mastik silikon çekim tamiratına,</p>
+                <p>• Cephe boya uygulamasına,</p>
+                <p>• Basınçlı yıkama ile cephe temizliğine kadar tüm işlemleri koordineli ve profesyonel biçimde yürütür.</p>
+
+                <h4><i class="bi bi-tools"></i> Hizmetlerimiz ve Neden Biz?</h4>
+                <p>• Dış cephe & bina cephe mantolama işlemlerinde en yeni yalıtım sistemlerini kullanırız.</p>
+                <p>• Tamir tadilat ve boya onarımları, çatlak tamiri, sıva yenileme, yüzey düzeltme ile kusursuz hale gelir.</p>
+                <p>• Asma iskele ile çalışma ile güven ve hız sağlanır.</p>
+                <p>• Mastik silikon çekimi tamiri ile cephe birleşim noktalarındaki su sızmaları giderilir.</p>
+                <p>• Cephe boyama ve cephe yıkama (basınçlı yıkama) ile dış yüzeyler hem temizlenir hem yenilenir.</p>
                   </div>
-                  <h4>Hızlı Hizmet</h4>
-                  <p>Bir çağrınızla yola çıkar, kısa sürede adresinize ulaşırız. Acil durumlar için 7/24 hizmet.</p>
-                </div>
 
-                <div class="feature-card">
-                  <div class="icon">
-                    <i class="bi bi-shield-check"></i>
-                  </div>
-                  <h4>Garantili İşçilik</h4>
-                  <p>Tüm işlerimizde kalite garantisi veriyoruz. Müşteri memnuniyeti önceliğimizdir.</p>
-                </div>
+              <div class="content-section" data-aos="fade-up" data-aos-delay="300">
+                <h3><i class="bi bi-wrench"></i> Mantolama ve Onarım Uygulamaları</h3>
+                <p>Mevcut mantolama yüzeyinde oluşan kabarma, çatlak veya boya dökülmeleri varsa mantolama onarımı hizmetimiz devreye girer. Yüzey yenileme sonrası, cephe boya uygulamaları ile binanızın görünümünü tamamen yenileriz.</p>
 
-                <div class="feature-card">
-                  <div class="icon">
-                    <i class="bi bi-currency-dollar"></i>
-                  </div>
-                  <h4>Uygun Fiyat</h4>
-                  <p>Rekabetçi fiyatlarımızla kaliteli hizmeti herkes için erişilebilir kılıyoruz.</p>
-                </div>
+                <h4><i class="bi bi-shield-check"></i> Isı, Su ve Ses Yalıtımı</h4>
+                <p>• Isı yalıtımı: Yakıt giderlerini düşürür, ısı kaybını önler.</p>
+                <p>• Su yalıtımı: Nem, rutubet ve küf oluşumunu engeller.</p>
+                <p>• Ses yalıtımı: Daireler arası ses geçişini azaltır, sessiz yaşam alanı sağlar.</p>
               </div>
 
-              <div class="content-section" data-aos="fade-up" data-aos-delay="500">
-                <h3>Deneyim ve Uzmanlık</h3>
-                <p>13 yıllık sektör deneyimimizle, her türlü yapı malzemesi ve uygulama tekniğine hakimiz. Modern teknoloji ve geleneksel ustalığı birleştirerek, en kaliteli sonuçları elde ediyoruz.</p>
-                <p>Ekibimiz, sürekli eğitim ve gelişim programlarıyla kendini yenileyen, alanında uzman profesyonellerden oluşmaktadır.</p>
+              <div class="content-section" data-aos="fade-up" data-aos-delay="400">
+                <h3><i class="bi bi-droplet"></i> Su Yalıtımı Nasıl Yapılır?</h3>
+                <p>Yapı sahiplerinin en çok merak ettiği konu: su yalıtımı nasıl yapılır?</p>
+                <p>Bu sorunun cevabında:</p>
+                <p>1. Yüzey hazırlığı: Eski boya, gevşek kısımlar ve toz temizlenir.</p>
+                <p>2. Astar uygulamasıyla yüzeyin emiciliği dengelenir.</p>
+                <p>3. Seçilen su yalıtım malzemesi (çimento esaslı, poliüretan, bitüm esaslı vb.) kat kat uygulanır.</p>
+                <p>4. Derzler, köşe detayları ve geçiş noktaları mastik silikon çekimi ile detaylandırılır.</p>
+                <p>5. Kuruma süresi sonrası kaplama ya da üst katman koruyucu boya ile tamamlanır.</p>
+
+                <h4><i class="bi bi-exclamation-triangle"></i> Su Yalıtımında Dikkat Edilmesi Gereken Noktalar</h4>
+                <p>• Malzeme seçimi: Çimento esaslı, likit membran, poliüretan, bitüm esaslı sistemler gibi farklı tipler vardır.</p>
+                <p>• Derz ve geçiş detayları: Duvardan terasa veya duvara geçiş gibi noktalarda mastik silikon çekimi ile su geçirmezlik sağlanmalı.</p>
+                <p>• Profesyonel uygulama: Yanlış yapılan bir uygulama kısa sürede yıpranma ve tekrar onarım gereksinimi doğurur.</p>
+                <p>• Garanti ve işçilik: Uygulama sonrasında garanti veren ve temiz çalışma prensibini benimseyen firmalar tercih edilmelidir.</p>
+                <p>• Kuruma süresi ve test: Uygulama tamamlandıktan sonra su testi yapılmalı; kuruma süresine mutlaka uyulmalı.</p>
+                <p>Su yalıtımı, evlerinizin ömrünü uzatan ve sizi ileride karşılaşılabilir nem, küf ve su sızıntılarıyla oluşabilecek maliyetlerden koruyan kritik bir hizmettir.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interior Renovation Section -->
+    <section class="section-interior">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="content-card" data-aos="fade-up">
+              <div class="content-section" data-aos="fade-up" data-aos-delay="200">
+                <h3><i class="bi bi-house-heart"></i> İç Mekan Tadilat ve Dekorasyon Hizmetleri</h3>
+                <p>Ev dekorasyonu sadece estetik değil, aynı zamanda fonksiyonellik ister. Profesyonel tadilat ekibimizle tüm dairelerde anahtar teslim çözümler sunuyoruz.</p>
+
+                <h4><i class="bi bi-grid-3x3-gap"></i> Alçıpan Tavan Sistemleri</h4>
+                <p>Modern iç mekan tasarımlarında alçıpan tavan sistemleri, LED aydınlatmalar ve gizli niş detaylarıyla fark yaratır.</p>
+
+                <h4><i class="bi bi-layers"></i> Parke Döşeme Ustası Hizmeti</h4>
+                <p>Yüzey düzeltme, süpürgelik montajı ve laminat parke uygulamalarında uzman ekibimizle kusursuz sonuçlar sunuyoruz.</p>
+
+                <h4><i class="bi bi-bath"></i> Banyo ve Mutfak Yenileme</h4>
+                <p>• Seramik ve fayans uygulamaları,</p>
+                <p>• Tesisat yenileme,</p>
+                <p>• Dolap, tezgah ve armatür değişimleri,</p>
+                <p>• Suya dayanıklı boya ve silikon detaylarıyla uzun ömürlü yenileme hizmetleri sağlıyoruz.</p>
+
+                <h4><i class="bi bi-tv"></i> TV Ünitesi ve Niş Tasarımı</h4>
+                <p>Salon veya oturma odasında şık, modern ve işlevsel TV ünitesi ve niş tasarımları ile yaşam alanlarınızı güzelleştiriyoruz.</p>
+
+                <h4><i class="bi bi-hammer"></i> Karot Delme, Cephe Boya ve Söve Tadilatı</h4>
+                <p>• Karot delme ve kesme işlemleriyle tesisat geçişleri profesyonelce açılır,</p>
+                <p>• Cephe boya uygulamaları ile estetik görünüm sağlanır,</p>
+                <p>• Söve tadilatı ile dış cephede zarif detaylar oluşturulur.</p>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="section-guarantee">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="content-card" data-aos="fade-up">
+              <div class="content-section" data-aos="fade-up" data-aos-delay="200">
+                <h3><i class="bi bi-shield-check"></i> Profesyonel, Garantili ve Zamanında Teslim Hizmet</h3>
+                <p>Tüm çalışmalarımızda üç temel ilkemiz vardır:</p>
+                <p>1. Profesyonel ekip çalışması – Deneyimli ustalar ve mühendis kontrolü</p>
+                <p>2. Garantili işçilik – Her işlem sözleşme ile güvence altına alınır</p>
+                <p>3. Temiz çalışma prensibi – Eşyalarınız korunur, iş bitiminde ortam tertemiz teslim edilir</p>
+                <p>Zamanında teslim prensibimizle projeleriniz planlandığı tarihte tamamlanır. Müşteri memnuniyeti, bizim için en önemli başarı ölçüsüdür.</p>
               </div>
 
-              <div class="cta-section" data-aos="fade-up" data-aos-delay="600">
-                <h3>Hizmet Almak İçin İletişime Geçin</h3>
-                <p>Gezgin Ustalar ekibi olarak, projelerinizi hayata geçirmek için buradayız. Hemen iletişime geçin, size en uygun çözümü sunalım.</p>
+              <div class="cta-section" data-aos="fade-up" data-aos-delay="300">
+                <h3><i class="bi bi-telephone"></i> Hizmet Almak İçin İletişime Geçin</h3>
+                <p>Gezgin Ustalar – Tecrübe, güven ve kaliteli hizmetin birleştiği adres.</p>
                 <div class="cta-buttons">
                   <a href="tel:+905065636879" class="btn btn-primary">
                     <i class="bi bi-telephone-fill"></i>
@@ -548,24 +1161,42 @@
                   </a>
                 </div>
               </div>
-
-            </article>
-            
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Logo Showcase Section -->
-    <section class="logo-showcase py-5">
+    <!-- Keywords Section -->
+    <section class="section-keywords">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-lg-6 col-md-8">
-            <div class="logo-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-10">
+            <div class="content-card" data-aos="fade-up">
+              <div class="content-section" data-aos="fade-up" data-aos-delay="200">
+                <h3><i class="bi bi-tags"></i> Anahtar Kelimeler ve Hizmet Alanları</h3>
+                <p>1+1 daire boyama fiyatları, 2+1 daire boya ustası, 3+1 ev tadilatı, 4+1 boya uygulaması, dış cephe mantolama, mantolama onarımı, ısı yalıtımı, su yalıtımı, ses yalıtımı, alçıpan tavan sistemleri, parke döşeme ustası, banyo yenileme, mutfak tadilatı, TV ünitesi tasarımı, karot delme, cephe boya uygulamaları, söve tadilatı, çatı izolasyonu, enerji tasarruflu bina çözümleri, profesyonel tadilat ekibi, garantili işçilik, temiz çalışma prensibi, zamanında teslim.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Logo Section -->
+    <section class="section-logo">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="text-center mb-5" data-aos="fade-up">
+              <h2 class="text-white mb-3"><i class="bi bi-award"></i> Gezgin Ustalar</h2>
+              <p class="text-white-50 fs-5">Profesyonel Tadilat ve Dekorasyon Hizmetleri</p>
+            </div>
+            <div class="logo-container" data-aos="fade-up" data-aos-delay="300">
               <img src="static/logo.jpg" alt="Gezgin Ustalar Logo" class="logo-image">
               <div class="logo-overlay">
                 <h3>Gezgin Ustalar</h3>
-                <p>Profesyonel Tadilat ve Dekorasyon Hizmetleri</p>
+                <p>13 Yıllık Tecrübe • Profesyonel Usta Ekibi • Kaliteli Hizmet</p>
               </div>
             </div>
           </div>
