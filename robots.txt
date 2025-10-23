@@ -48,4 +48,4 @@ Allow: /projects.html
 Allow: /quote.html
 
 # Host
-Host: https://www.gezginustalar.com
+Host: www.gezginustalar.com

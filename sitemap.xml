@@ -35,12 +35,12 @@
       <image:caption>Karot Delme ve Kesme İşlemleri - Gezgin Ustalar</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.gezginustalar.com/static/Asansor%20ici%20tadilat.jpg</image:loc>
+      <image:loc>https://www.gezginustalar.com/static/Asans%C3%B6r%20i%C3%A7i%20tadilat.jpg</image:loc>
       <image:title>Asansör İçi Yenileme ve Tadilat Hizmetleri</image:title>
       <image:caption>Asansör İçi Yenileme ve Tadilat Hizmetleri - Gezgin Ustalar</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.gezginustalar.com/static/Kompozit%20isleri.jpg</image:loc>
+      <image:loc>https://www.gezginustalar.com/static/Kompozit%20i%C5%9Fleri.jpg</image:loc>
       <image:title>Kompozit Cephe Tamiri ve Yenileme Hizmetleri</image:title>
       <image:caption>Kompozit Cephe Tamiri ve Yenileme Hizmetleri - Gezgin Ustalar</image:caption>
     </image:image>
@@ -68,7 +68,7 @@
   
   <!-- Hakkımızda Sayfası -->
   <url>
-    <loc>https://www.gezginustalar.com/hakkimizda</loc>
+    <loc>https://www.gezginustalar.com/about.html</loc>
     <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -76,7 +76,7 @@
   
   <!-- Hizmetler Sayfası -->
   <url>
-    <loc>https://www.gezginustalar.com/hizmetler</loc>
+    <loc>https://www.gezginustalar.com/services.html</loc>
     <lastmod>2025-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -84,7 +84,7 @@
   
   <!-- Hizmet Detayları Sayfası -->
   <url>
-    <loc>https://www.gezginustalar.com/service-details</loc>
+    <loc>https://www.gezginustalar.com/service-details.html</loc>
     <lastmod>2025-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -92,7 +92,7 @@
   
   <!-- Galeri Sayfası -->
   <url>
-    <loc>https://www.gezginustalar.com/galeri</loc>
+    <loc>https://www.gezginustalar.com/gallery.html</loc>
     <lastmod>2025-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -100,7 +100,7 @@
   
   <!-- Projeler Sayfası -->
   <url>
-    <loc>https://www.gezginustalar.com/projeler</loc>
+    <loc>https://www.gezginustalar.com/projects.html</loc>
     <lastmod>2025-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -108,7 +108,7 @@
   
   <!-- İletişim Sayfası -->
   <url>
-    <loc>https://www.gezginustalar.com/iletisim</loc>
+    <loc>https://www.gezginustalar.com/contact.html</loc>
     <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -116,7 +116,7 @@
   
   <!-- Teklif Sayfası -->
   <url>
-    <loc>https://www.gezginustalar.com/teklif</loc>
+    <loc>https://www.gezginustalar.com/quote.html</loc>
     <lastmod>2025-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
