@@ -2,10 +2,10 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://www.gezginustalar.com/sitemap-index.xml
-Sitemap: https://www.gezginustalar.com/sitemap.xml
-Sitemap: https://www.gezginustalar.com/sitemap-images.xml
-Sitemap: https://www.gezginustalar.com/sitemap-videos.xml
+Sitemap: https://gezginustalar.com/sitemap-index.xml
+Sitemap: https://gezginustalar.com/sitemap.xml
+Sitemap: https://gezginustalar.com/sitemap-images.xml
+Sitemap: https://gezginustalar.com/sitemap-videos.xml
 
 # Crawl-delay
 Crawl-delay: 1
@@ -48,4 +48,4 @@ Allow: /projects.html
 Allow: /quote.html
 
 # Host
-Host: www.gezginustalar.com
+Host: gezginustalar.com
