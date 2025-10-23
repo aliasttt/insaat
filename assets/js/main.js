@@ -61,6 +61,28 @@
   });
 
   /**
+   * Normalize header nav links to root-absolute paths to avoid relative 404s
+   * Skips when running via file:// to preserve local preview behavior
+   */
+  function normalizeHeaderNavLinks() {
+    if (location.protocol === 'file:') return;
+    document.querySelectorAll('#navmenu a[href]').forEach((link) => {
+      const href = link.getAttribute('href');
+      if (!href) return;
+
+      const isHash = href.startsWith('#');
+      const isAbsoluteUrl = /^(?:[a-z]+:)?\/\//i.test(href);
+      const isTelOrMail = href.startsWith('tel:') || href.startsWith('mailto:');
+      const isAbsolutePath = href.startsWith('/');
+
+      if (isHash || isAbsoluteUrl || isTelOrMail || isAbsolutePath) return;
+
+      link.setAttribute('href', '/' + href.replace(/^\/+/, ''));
+    });
+  }
+  window.addEventListener('DOMContentLoaded', normalizeHeaderNavLinks);
+
+  /**
    * Preloader
    */
   const preloader = document.querySelector('#preloader');
