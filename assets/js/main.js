@@ -186,4 +186,68 @@
 
   window.addEventListener("load", initHeroVideoCycling);
 
+  /**
+   * Before/After slider init
+   * Expects markup:
+   * <div class="ba-compare" data-ratio="0.625">
+   *   <img class="ba-after" src="...">
+   *   <img class="ba-before" src="...">
+   *   <div class="ba-handle"></div>
+   *   <div class="ba-grip"><i class="bi bi-arrows-expand"></i></div>
+   *   <span class="ba-label before">Önce</span>
+   *   <span class="ba-label after">Sonra</span>
+   * </div>
+   */
+  function initBeforeAfter() {
+    const components = document.querySelectorAll('.ba-compare');
+    if (!components.length) return;
+
+    components.forEach((wrap) => {
+      const beforeImg = wrap.querySelector('.ba-before');
+      const handle = wrap.querySelector('.ba-handle');
+      const grip = wrap.querySelector('.ba-grip');
+      if (!beforeImg || !handle) return;
+
+      // Optional aspect ratio control via data-ratio
+      const ratio = parseFloat(wrap.getAttribute('data-ratio'));
+      if (!Number.isNaN(ratio) && ratio > 0) {
+        wrap.style.paddingBottom = (ratio * 100) + '%';
+      }
+
+      let isDown = false;
+
+      function setPosition(clientX) {
+        const rect = wrap.getBoundingClientRect();
+        let x = Math.min(Math.max(clientX - rect.left, 0), rect.width);
+        const pct = (x / rect.width) * 100;
+        beforeImg.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+        handle.style.left = pct + '%';
+        if (grip) grip.style.left = pct + '%';
+      }
+
+      function down(e) {
+        isDown = true;
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        setPosition(clientX);
+      }
+
+      function move(e) {
+        if (!isDown) return;
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        setPosition(clientX);
+      }
+
+      function up() { isDown = false; }
+
+      wrap.addEventListener('mousedown', down);
+      wrap.addEventListener('touchstart', down, { passive: true });
+      window.addEventListener('mousemove', move);
+      window.addEventListener('touchmove', move, { passive: false });
+      window.addEventListener('mouseup', up);
+      window.addEventListener('touchend', up);
+    });
+  }
+
+  window.addEventListener('load', initBeforeAfter);
+
 })();

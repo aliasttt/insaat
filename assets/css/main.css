@@ -4711,9 +4711,7 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
+.starter-section { display: block; }
 
 /*--------------------------------------------------------------
 # Call Float Button
@@ -5236,4 +5234,92 @@ section,
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+/* Before/After Slider */
+.ba-compare {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 62.5%; /* 16:10 default; can be overridden inline */
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.15);
+}
+
+.ba-compare img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Background-layer option for sprite images (top/bottom halves in one file) */
+.ba-compare .ba-layer {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: var(--ba-img);
+  background-repeat: no-repeat;
+  background-size: 100% 200%; /* map top or bottom half to full container */
+  background-position: bottom center; /* default bottom = AFTER */
+  pointer-events: none;
+}
+.ba-compare .ba-layer.before { background-position: top center; }
+
+.ba-compare .ba-after { z-index: 1; }
+
+.ba-compare .ba-before {
+  clip-path: inset(0 50% 0 0); /* show left half */
+  transition: clip-path 0.2s ease;
+  z-index: 2;
+}
+
+.ba-compare .ba-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.25);
+}
+
+.ba-compare .ba-grip {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(233,99,8,0.35);
+}
+
+.ba-compare .ba-label {
+  position: absolute;
+  top: 14px;
+  z-index: 3;
+  padding: 6px 12px;
+  font-weight: 700;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.35);
+}
+
+.ba-compare .ba-label.before { left: 14px; background: rgba(0,0,0,0.35); }
+.ba-compare .ba-label.after { right: 14px; background: rgba(233, 99, 8, 0.75); }
+
+@media (max-width: 768px) {
+  .ba-compare { padding-bottom: 75%; }
+  .ba-compare .ba-grip { width: 40px; height: 40px; }
 }
