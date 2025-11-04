@@ -83,13 +83,88 @@
   window.addEventListener('DOMContentLoaded', normalizeHeaderNavLinks);
 
   /**
-   * Preloader
+   * Preloader - Wait for videos to be ready before hiding
    */
   const preloader = document.querySelector('#preloader');
   if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove();
-    });
+    const heroVideos = document.querySelectorAll('.hero-video');
+    
+    function hidePreloaderWhenReady() {
+      if (heroVideos.length === 0) {
+        // No videos, hide preloader on window load
+        window.addEventListener('load', () => {
+          preloader.remove();
+        });
+        return;
+      }
+
+      let videosReady = 0;
+      const totalVideos = heroVideos.length;
+      let firstVideoPlaying = false;
+
+      function checkAndHidePreloader() {
+        if (videosReady === totalVideos && firstVideoPlaying) {
+          preloader.remove();
+          // Ensure first video is playing
+          const firstVideo = heroVideos[0];
+          if (firstVideo.paused) {
+            firstVideo.play().catch(() => {
+              // If autoplay fails, continue anyway
+            });
+          }
+        }
+      }
+
+      // Listen for video canplay event (video is ready to play)
+      heroVideos.forEach((video, index) => {
+        video.addEventListener('canplaythrough', () => {
+          videosReady++;
+          if (index === 0) {
+            // First video is ready, try to play it
+            video.play().then(() => {
+              firstVideoPlaying = true;
+              checkAndHidePreloader();
+            }).catch(() => {
+              // Autoplay may be blocked, but video is ready
+              firstVideoPlaying = true;
+              checkAndHidePreloader();
+            });
+          }
+          checkAndHidePreloader();
+        });
+
+        // Also listen for loadeddata as fallback
+        video.addEventListener('loadeddata', () => {
+          if (index === 0 && !firstVideoPlaying) {
+            video.play().then(() => {
+              firstVideoPlaying = true;
+              checkAndHidePreloader();
+            }).catch(() => {
+              firstVideoPlaying = true;
+              checkAndHidePreloader();
+            });
+          }
+        });
+
+        // Ensure video loads
+        video.load();
+      });
+
+      // Fallback: hide preloader after max 5 seconds even if videos aren't ready
+      setTimeout(() => {
+        if (preloader && preloader.parentNode) {
+          preloader.remove();
+          // Try to play videos anyway
+          heroVideos.forEach(video => {
+            if (video.paused) {
+              video.play().catch(() => {});
+            }
+          });
+        }
+      }, 5000);
+    }
+
+    hidePreloaderWhenReady();
   }
 
   /**
@@ -162,29 +237,65 @@
    */
   function initHeroVideoCycling() {
     const heroVideos = document.querySelectorAll('.hero-video');
-    if (heroVideos.length === 0) return;
+    if (heroVideos.length <= 1) return;
 
     let currentVideoIndex = 0;
     const videoDuration = 8000; // 8 seconds per video
+    let cyclingInterval = null;
 
     function showNextVideo() {
-      // Remove active class from current video
-      heroVideos[currentVideoIndex].classList.remove('active');
+      // Remove active class from current video and pause it
+      const currentVideo = heroVideos[currentVideoIndex];
+      currentVideo.classList.remove('active');
+      currentVideo.pause();
       
       // Move to next video
       currentVideoIndex = (currentVideoIndex + 1) % heroVideos.length;
       
-      // Add active class to next video
-      heroVideos[currentVideoIndex].classList.add('active');
+      // Add active class to next video and play it
+      const nextVideo = heroVideos[currentVideoIndex];
+      nextVideo.classList.add('active');
+      nextVideo.currentTime = 0; // Reset to start
+      nextVideo.play().catch(() => {
+        // If autoplay fails, continue anyway
+      });
     }
 
-    // Start cycling after a delay to let the first video play
-    setTimeout(() => {
-      setInterval(showNextVideo, videoDuration);
-    }, videoDuration);
+    // Wait for first video to be playing before starting cycle
+    const firstVideo = heroVideos[0];
+    if (firstVideo) {
+      const startCycling = () => {
+        // Start cycling after a delay to let the first video play
+        setTimeout(() => {
+          cyclingInterval = setInterval(showNextVideo, videoDuration);
+        }, videoDuration);
+      };
+
+      // If video is already playing, start cycling
+      if (!firstVideo.paused && firstVideo.readyState >= 2) {
+        startCycling();
+      } else {
+        // Wait for video to start playing
+        firstVideo.addEventListener('playing', startCycling, { once: true });
+        // Also check if video is already ready
+        if (firstVideo.readyState >= 2) {
+          firstVideo.play().then(() => {
+            startCycling();
+          }).catch(() => {
+            // Still start cycling even if autoplay fails
+            startCycling();
+          });
+        }
+      }
+    }
   }
 
-  window.addEventListener("load", initHeroVideoCycling);
+  // Initialize video cycling after DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHeroVideoCycling);
+  } else {
+    initHeroVideoCycling();
+  }
 
   /**
    * Before/After slider init

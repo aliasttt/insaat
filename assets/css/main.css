@@ -1168,14 +1168,13 @@ section,
   object-fit: cover;
   opacity: 0;
   transition: opacity 2s ease-in-out;
+  z-index: 1;
 }
 
-.hero .hero-video-container .hero-video:first-child {
-  opacity: 1;
-}
-
+.hero .hero-video-container .hero-video:first-child,
 .hero .hero-video-container .hero-video.active {
   opacity: 1;
+  z-index: 2;
 }
 
 .hero .hero-overlay {
