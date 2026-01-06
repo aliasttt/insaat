@@ -1,0 +1,51 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://gezginustalar.com/sitemap-index.xml
+Sitemap: https://gezginustalar.com/sitemap.xml
+Sitemap: https://gezginustalar.com/sitemap-images.xml
+Sitemap: https://gezginustalar.com/sitemap-videos.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Allow static content
+Allow: /static/
+Allow: /assets/
+Allow: /forms/
+
+# Allow specific file types
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.mp4$
+Allow: /*.webm$
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.pdf$
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+
+# Disallow query parameters
+Disallow: /*?*
+Disallow: /*&*
+
+# Allow important pages
+Allow: /index.html
+Allow: /about.html
+Allow: /services.html
+Allow: /gallery.html
+Allow: /contact.html
+Allow: /blog.html
+Allow: /projects.html
+Allow: /quote.html
+
+# Host
+Host: gezginustalar.com

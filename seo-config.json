@@ -1,0 +1,67 @@
+{
+  "site": {
+    "name": "Gezgin Ustalar",
+    "url": "https://www.gezginustalar.com",
+    "description": "Ev dekorasyon, tamir & tadilat, dış cephe mantolama, izolasyon hizmetleri İstanbul",
+    "keywords": "gezgin ustalar, ev dekorasyon, tamir tadilat, daire boyama, dış cephe mantolama, izolasyon, karot delme, asansör tadilatı, İstanbul usta, boya ustası, tadilat ustası, dekorasyon ustası, mantolama ustası, su yalıtımı, ısı yalıtımı, ses yalıtımı, cephe boya, bina boya, villa tadilat, daire tadilat, banyo yenileme, mutfak tadilat, alçıpan tavan, parke döşeme, seramik döşeme, duşakabin montaj, kompozit cephe, silikon mastik, söve tadilat, çatı izolasyon, enerji tasarrufu, profesyonel tadilat, garantili işçilik, temiz çalışma, zamanında teslim, uygun fiyat, hızlı hizmet, WhatsApp usta, usta çağır, İstanbul tadilat, İstanbul dekorasyon, İstanbul boya, İstanbul mantolama"
+  },
+  "contact": {
+    "phone": "+905065636879",
+    "email": "gezginustalar@gmail.com",
+    "whatsapp": "https://wa.me/905065636879?text=Merhaba%2C%20Bilgi%20ve%20teklif%20almak%20istiyorum.",
+    "address": {
+      "city": "İstanbul",
+      "country": "TR",
+      "coordinates": {
+        "latitude": "41.0082",
+        "longitude": "28.9784"
+      }
+    }
+  },
+  "social": {
+    "facebook": "#",
+    "instagram": "#",
+    "linkedin": "#",
+    "twitter": "#",
+    "dribbble": "#"
+  },
+  "seo": {
+    "default_robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    "default_language": "Turkish",
+    "default_region": "TR-34",
+    "default_placename": "İstanbul",
+    "default_author": "Gezgin Ustalar"
+  },
+  "pages": {
+    "index": {
+      "title": "Gezgin Ustalar - Ev Dekorasyon, Tamir Tadilat, Daire Boyama, Dış Cephe Mantolama İstanbul",
+      "description": "GEZGİN USTALAR - Ev Dekorasyon, Tamir & Tadilat Hizmetleri. Daire boyama, dış cephe mantolama, izolasyon, karot delme, asansör tadilatı. İstanbul genelinde hızlı hizmet, garantili işçilik, uygun fiyat. Ustalar yolda, çözüm kapında!",
+      "canonical": "https://www.gezginustalar.com/",
+      "priority": "1.0"
+    },
+    "about": {
+      "title": "Hakkımızda - Gezgin Ustalar",
+      "description": "Gezgin Ustalar: 13 yıllık tecrübe ile tadilat, dekorasyon, dış cephe, mantolama, izolasyon ve karot delme hizmetleri. Hızlı hizmet, garantili işçilik, uygun fiyat.",
+      "canonical": "https://www.gezginustalar.com/about.html",
+      "priority": "0.8"
+    },
+    "services": {
+      "title": "Hizmetler - Gezgin Ustalar",
+      "description": "İstanbul genelinde Dış Cephe & Mantolama, Daire İçi Tadilat, İzolasyon & Su Yalıtımı, Karot Delme ve Kesme hizmetleri. Ustalar yolda, çözüm kapında! Hızlı hizmet, garantili işçilik, uygun fiyat.",
+      "canonical": "https://www.gezginustalar.com/services.html",
+      "priority": "0.9"
+    },
+    "gallery": {
+      "title": "Sürme İzolasyon Yalıtım Galerisi - Gezgin Ustalar",
+      "description": "Sürme izolasyon yalıtım işlerimizin profesyonel galerisi. Su yalıtımı, sızdırmazlık ve izolasyon uygulamalarımızı keşfedin.",
+      "canonical": "https://www.gezginustalar.com/gallery.html",
+      "priority": "0.7"
+    },
+    "contact": {
+      "title": "İletişim - Gezgin Ustalar",
+      "description": "Gezgin Ustalar ile iletişime geçin. Ev dekorasyon, tamir & tadilat hizmetleri için WhatsApp +90 506 563 68 79. İstanbul genelinde hızlı hizmet, garantili işçilik.",
+      "canonical": "https://www.gezginustalar.com/contact.html",
+      "priority": "0.8"
+    }
+  }
+}

@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Hakkımızda - Gezgin Ustalar</title>
+  <meta name="description" content="Gezgin Ustalar: 13 yıllık tecrübe ile tadilat, dekorasyon, dış cephe, mantolama, izolasyon ve karot delme hizmetleri. Hızlı hizmet, garantili işçilik, uygun fiyat.">
+  <meta name="keywords" content="gezgin ustalar, tadilat, dekorasyon, dış cephe, mantolama, İstanbul, ev dekorasyon, tamir, boya ustası, tadilat ustası, dekorasyon ustası, mantolama ustası, su yalıtımı, ısı yalıtımı, ses yalıtımı, cephe boya, bina boya, villa tadilat, daire tadilat, banyo yenileme, mutfak tadilat, alçıpan tavan, parke döşeme, seramik döşeme, duşakabin montaj, kompozit cephe, silikon mastik, söve tadilat, çatı izolasyon, enerji tasarrufu, profesyonel tadilat, garantili işçilik, temiz çalışma, zamanında teslim, uygun fiyat, hızlı hizmet, WhatsApp usta, usta çağır, İstanbul tadilat, İstanbul dekorasyon, İstanbul boya, İstanbul mantolama">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Hakkımızda - Gezgin Ustalar | 13 Yıllık Tecrübe">
+  <meta property="og:description" content="Gezgin Ustalar hakkında bilgi. 13 yıllık tecrübe ile tadilat, dekorasyon, dış cephe, mantolama, izolasyon hizmetleri. İstanbul genelinde güvenilir hizmet.">
+  <meta property="og:image" content="https://gezginustalar.com/static/logo.jpg">
+  <meta property="og:url" content="https://gezginustalar.com/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Gezgin Ustalar">
+  <meta property="og:locale" content="tr_TR">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hakkımızda - Gezgin Ustalar | 13 Yıllık Tecrübe">
+  <meta name="twitter:description" content="Gezgin Ustalar hakkında bilgi. 13 yıllık tecrübe ile tadilat, dekorasyon hizmetleri.">
+  <meta name="twitter:image" content="https://gezginustalar.com/static/logo.jpg">
+  
+  <!-- Additional SEO Meta Tags -->
+  <meta name="author" content="Gezgin Ustalar">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <meta name="bingbot" content="index, follow">
+  <meta name="language" content="Turkish">
+  <meta name="geo.region" content="TR-34">
+  <meta name="geo.placename" content="İstanbul">
+  <meta name="geo.position" content="41.0082;28.9784">
+  <meta name="ICBM" content="41.0082, 28.9784">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.gezginustalar.com/hakkimizda">
+
+  <!-- Organization Schema for Logo -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "url": "https://gezginustalar.com",
+    "logo": "https://gezginustalar.com/static/logo.jpg"
+  }
+  </script>
+
+  <!-- Favicons -->
+  <link href="static/logo.jpg" rel="icon" type="image/jpeg">
+  <link href="static/logo.jpg" rel="apple-touch-icon" type="image/jpeg">
+
+  <!-- Fonts -->
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Custom About Page Styles -->
+  <style>
+    /* Mission & Vision Cards */
+    .mission-card, .vision-card {
+      background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+      padding: 60px 50px;
+      border-radius: 30px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+      text-align: center;
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      border: 3px solid rgba(233, 99, 8, 0.15);
+      backdrop-filter: blur(10px);
+    }
+
+    .mission-card::before, .vision-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 8px;
+      background: linear-gradient(90deg, #e96308, #ff8c42, #e96308, #ff8c42);
+      background-size: 300% 100%;
+      animation: gradient-shift 4s ease-in-out infinite;
+      border-radius: 30px 30px 0 0;
+    }
+
+    .mission-card::after, .vision-card::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, rgba(233, 99, 8, 0.1), rgba(255, 140, 66, 0.1));
+      border-radius: 50%;
+      z-index: 1;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes gradient-shift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(180deg); }
+    }
+
+    .mission-card:hover, .vision-card:hover {
+      transform: translateY(-20px) scale(1.03);
+      box-shadow: 0 35px 80px rgba(233, 99, 8, 0.25);
+      border-color: rgba(233, 99, 8, 0.4);
+    }
+
+    .card-icon {
+      width: 120px;
+      height: 120px;
+      background: linear-gradient(135deg, #e96308, #ff8c42);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 35px;
+      color: white;
+      font-size: 3rem;
+      box-shadow: 0 15px 40px rgba(233, 99, 8, 0.4);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+      z-index: 2;
+    }
+
+    .card-icon::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      right: -8px;
+      bottom: -8px;
+      background: linear-gradient(135deg, #e96308, #ff8c42);
+      border-radius: 50%;
+      z-index: -1;
+      opacity: 0;
+      transition: all 0.4s ease;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0; }
+      50% { transform: scale(1.1); opacity: 0.3; }
+    }
+
+    .mission-card:hover .card-icon, .vision-card:hover .card-icon {
+      transform: scale(1.15) rotate(10deg);
+      box-shadow: 0 20px 50px rgba(233, 99, 8, 0.5);
+    }
+
+    .mission-card:hover .card-icon::before, .vision-card:hover .card-icon::before {
+      opacity: 0.4;
+      animation: none;
+    }
+
+    .mission-card h3, .vision-card h3 {
+      color: #2c1607;
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 30px;
+      position: relative;
+      text-shadow: 0 3px 6px rgba(0,0,0,0.15);
+      background: linear-gradient(135deg, #2c1607, #342c26);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .mission-card h3::after, .vision-card h3::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, #e96308, #ff8c42);
+      border-radius: 2px;
+      box-shadow: 0 2px 8px rgba(233, 99, 8, 0.3);
+    }
+
+    .mission-card p, .vision-card p {
+      color: #342c26;
+      line-height: 1.9;
+      font-size: 1.3rem;
+      font-weight: 500;
+      text-align: justify;
+      position: relative;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      padding: 20px;
+      background: linear-gradient(135deg, rgba(233, 99, 8, 0.03), rgba(255, 140, 66, 0.03));
+      border-radius: 15px;
+      border-left: 4px solid #e96308;
+    }
+
+    /* Feature Cards */
+    .feature-card {
+      background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+      padding: 50px 35px;
+      border-radius: 25px;
+      box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      height: 100%;
+      border: 3px solid rgba(233, 99, 8, 0.15);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(233, 99, 8, 0.15), transparent);
+      transition: all 0.8s ease;
+    }
+
+    .feature-card::after {
+      content: '';
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, rgba(233, 99, 8, 0.1), rgba(255, 140, 66, 0.1));
+      border-radius: 50%;
+      z-index: 1;
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .feature-card:hover::before {
+      left: 100%;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-15px) scale(1.05);
+      box-shadow: 0 25px 60px rgba(233, 99, 8, 0.2);
+      border-color: rgba(233, 99, 8, 0.5);
+    }
+
+    .feature-icon {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, #e96308, #ff8c42);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 30px;
+      color: white;
+      font-size: 2.5rem;
+      box-shadow: 0 12px 35px rgba(233, 99, 8, 0.4);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      position: relative;
+      z-index: 2;
+    }
+
+    .feature-icon::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: -6px;
+      right: -6px;
+      bottom: -6px;
+      background: linear-gradient(135deg, #e96308, #ff8c42);
+      border-radius: 50%;
+      z-index: -1;
+      opacity: 0;
+      transition: all 0.4s ease;
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    .feature-card:hover .feature-icon {
+      transform: scale(1.2) rotate(15deg);
+      box-shadow: 0 18px 45px rgba(233, 99, 8, 0.5);
+    }
+
+    .feature-card:hover .feature-icon::before {
+      opacity: 0.3;
+      animation: none;
+    }
+
+    .feature-card h4 {
+      color: #2c1607;
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      position: relative;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background: linear-gradient(135deg, #2c1607, #342c26);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .feature-card h4::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 3px;
+      background: linear-gradient(90deg, #e96308, #ff8c42);
+      border-radius: 2px;
+      box-shadow: 0 2px 6px rgba(233, 99, 8, 0.3);
+    }
+
+    .feature-card p {
+      color: #342c26;
+      line-height: 1.8;
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      padding: 15px;
+      background: linear-gradient(135deg, rgba(233, 99, 8, 0.02), rgba(255, 140, 66, 0.02));
+      border-radius: 10px;
+      border-left: 3px solid #e96308;
+    }
+
+    /* Content Sections */
+    .content-section {
+      background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+      padding: 60px 50px;
+      border-radius: 25px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid rgba(233, 99, 8, 0.1);
+    }
+
+    .content-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, #e96308, #ff8c42, #e96308);
+      background-size: 200% 100%;
+      animation: gradient-shift 4s ease-in-out infinite;
+    }
+
+    .content-section::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, rgba(233, 99, 8, 0.1), rgba(255, 140, 66, 0.1));
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .lead-text {
+      font-size: 1.5rem;
+      color: #2c1607;
+      font-weight: 600;
+      line-height: 1.8;
+      margin-bottom: 25px;
+      position: relative;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(135deg, rgba(233, 99, 8, 0.05), rgba(255, 140, 66, 0.05));
+      border-radius: 15px;
+      border-left: 5px solid #e96308;
+    }
+
+    .description-text {
+      font-size: 1.2rem;
+      color: #342c26;
+      line-height: 1.8;
+      margin-bottom: 25px;
+      position: relative;
+      padding: 20px 0;
+      text-align: justify;
+      font-weight: 400;
+    }
+
+    .description-text::before {
+      content: '✨';
+      position: absolute;
+      left: -30px;
+      top: 20px;
+      font-size: 1.5rem;
+      color: #e96308;
+    }
+
+    .description-text:first-of-type::before {
+      content: '🏠';
+    }
+
+    .description-text:last-of-type::before {
+      content: '⚡';
+    }
+
+    /* Principle Cards */
+    .principle-card {
+      background: white;
+      padding: 35px 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: all 0.3s ease;
+      height: 100%;
+      border: 1px solid rgba(233, 99, 8, 0.1);
+    }
+
+    .principle-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+      border-color: rgba(233, 99, 8, 0.3);
+    }
+
+    .principle-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #e96308, #ff8c42);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 25px;
+      color: white;
+      font-size: 2rem;
+    }
+
+    .principle-card h4 {
+      color: #2c1607;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .principle-card p {
+      color: #342c26;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    /* Final Message */
+    .final-message {
+      background: linear-gradient(135deg, #e96308, #ff8c42);
+      color: white;
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(233, 99, 8, 0.3);
+    }
+
+    .final-message h3 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .final-message p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      opacity: 0.95;
+    }
+
+    /* Section Headings */
+    .section-heading {
+      color: #2c1607;
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 25px;
+      position: relative;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .section-heading::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 5px;
+      background: linear-gradient(135deg, #e96308, #ff8c42);
+      border-radius: 3px;
+      box-shadow: 0 2px 8px rgba(233, 99, 8, 0.3);
+    }
+
+    .section-description {
+      color: #342c26;
+      font-size: 1.4rem;
+      line-height: 1.6;
+      margin-bottom: 0;
+      font-weight: 500;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+
+    /* Services Overview Special Styling */
+    .services-overview .section-heading {
+      background: linear-gradient(135deg, #e96308, #ff8c42);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-size: 3rem;
+      margin-bottom: 30px;
+    }
+
+    .services-overview .section-description {
+      color: #e96308;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .mission-card, .vision-card {
+        padding: 30px 20px;
+        margin-bottom: 30px;
+      }
+      
+      .feature-card, .principle-card {
+        padding: 25px 20px;
+        margin-bottom: 20px;
+      }
+
+      .content-section {
+        padding: 30px 20px;
+      }
+      
+      .final-message {
+        padding: 40px 25px;
+      }
+      
+      .final-message h3 {
+        font-size: 1.8rem;
+      }
+
+      .section-heading {
+        font-size: 2rem;
+      }
+      
+      .card-icon, .principle-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+      }
+
+      .feature-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+
+  <!-- =======================================================
+  * Template Name: iConstruction
+  * Template URL: https://bootstrapmade.com/iconstruction-bootstrap-construction-template/
+  * Updated: Jul 27 2025 with Bootstrap v5.3.7
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="about-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <img src="static/logo.jpg?v=2" alt="Gezgin Ustalar Logo" class="logo-img me-2">
+        <h1 class="sitename">Gezgin Ustalar</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="about.html" class="active">Hakkımızda</a></li>
+          <li><a href="services.html">Hizmetler</a></li>
+          <li><a href="gallery.html">Galeri</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">İletişim</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted d-none d-sm-block" href="https://wa.me/905065636879?text=Merhaba%2C%20Bilgi%20ve%20teklif%20almak%20istiyorum." target="_blank">WhatsApp</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url('static/WhatsApp Image 2025-10-18 at 12.24.56 PM.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <div class="container position-relative">
+        <h1>Hakkımızda</h1>
+        <p>13 yıllık tecrübe ile kaliteli hizmet, güvenilir çözüm. İstanbul genelinde tadilat, tamirat, mantolama, izolasyon ve dekorasyon alanlarında güvenilir, kaliteli ve garantili hizmet sunuyoruz.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li class="current">Hakkımızda</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center">
+
+          <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right" data-aos-delay="200">
+            <div class="content">
+              <h2 class="section-heading mb-4">13 Yıllık Tecrübe ile Kaliteli Hizmet, Güvenilir Çözüm</h2>
+              <p class="lead-text mb-4">Gezgin Ustalar, 13 yıllık sektör deneyimiyle tadilat, tamirat, dekorasyon ve mantolama alanlarında İstanbul genelinde profesyonel çözümler sunar.</p>
+              <p class="description-text mb-4">Malzeme bilgisine hâkim, alanında uzman ustalarımızla; kaliteli işçilik, estetik uygulamalar ve zamanında teslim anlayışını bir araya getiriyoruz.</p>
+              <p class="description-text mb-5">Evinizi veya iş yerinizi yenilemek mi istiyorsunuz? Biz, ihtiyaçlarınıza en uygun çözümleri sunarak yaşam alanlarınızı konforlu, modern ve uzun ömürlü hale getiriyoruz.</p>
+
+              <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                  <div class="stat-number">13+</div>
+                  <div class="stat-label">Yıl Deneyim</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="350">
+                  <div class="stat-number">75+</div>
+                  <div class="stat-label">Tamamlanan Proje</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                  <div class="stat-number">98%</div>
+                  <div class="stat-label">Müşteri Memnuniyeti</div>
+                </div>
+              </div>
+
+              <div class="cta-section" data-aos="fade-up" data-aos-delay="450">
+                <a href="#services" class="cta-link">
+                  Hizmetlerimizi Keşfedin
+                  <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="200">
+            <div class="image-section">
+              <div class="main-image">
+                <div class="ba-compare" data-ratio="0.666" style="--ba-img: url('../../static/023ef189-5a70-4f69-957a-33b01675f906.jpg');">
+                  <div class="ba-layer ba-after"></div>
+                  <div class="ba-layer ba-before before"></div>
+                  <div class="ba-handle"></div>
+                  <div class="ba-grip"><i class="bi bi-arrows-expand"></i></div>
+                  <span class="ba-label before">Önce</span>
+                  <span class="ba-label after">Sonra</span>
+                </div>
+                <div class="ba-instruction">Dikey çizgiyi sağa/sola sürükleyin</div>
+              </div>
+              <div class="floating-badge" data-aos="zoom-in" data-aos-delay="500">
+                <div class="badge-content">
+                  <i class="bi bi-award"></i>
+                  <div class="badge-text">
+                    <span class="badge-title">Kalite Sertifikalı</span>
+                    <span class="badge-subtitle">2012'den Beri</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Mission & Vision & Why Us Section -->
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision section light-background">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+          <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right" data-aos-delay="200">
+            <div class="mission-card">
+              <div class="card-icon">
+                <i class="bi bi-award"></i>
+              </div>
+              <h3>Misyonumuz</h3>
+              <p>Müşteri memnuniyetini en üst seviyede tutarak; estetik, fonksiyonel ve uzun ömürlü yaşam alanları oluşturmak. Her projede kaliteli malzeme, profesyonel işçilik ve doğru planlama ile fark yaratmak.</p>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="vision-card">
+              <div class="card-icon">
+                <i class="bi bi-eye"></i>
+              </div>
+              <h3>Vizyonumuz</h3>
+              <p>İstanbul'un dört bir yanında, güvenilir ve sürdürülebilir hizmet anlayışıyla tanınan lider tadilat ve dekorasyon markalarından biri olmak. Her adımda teknoloji, yenilik ve ustalığı bir araya getirerek, yaşam alanlarını geleceğe taşımak.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-8">
+            <h2 class="section-heading">Neden Gezgin Ustalar?</h2>
+            <p class="section-description">13 yıllık deneyimimizle size en iyi hizmeti sunuyoruz</p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-clock-history"></i>
+              </div>
+              <h4>13 Yıllık Deneyim</h4>
+              <p>Sektörde 13 yıllık tecrübemizle her türlü projeyi başarıyla tamamlıyoruz.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-tools"></i>
+              </div>
+              <h4>Uzman Ustalar</h4>
+              <p>Malzeme bilgisine sahip, alanında uzman ustalarımızla çalışıyoruz.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-house-gear"></i>
+              </div>
+              <h4>Kapsamlı Hizmet</h4>
+              <p>Tadilat, tamirat, dekorasyon ve mantolama çözümleri tek çatı altında.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h4>Garantili İşçilik</h4>
+              <p>Temiz çalışma prensibi ve garantili işçilik anlayışımızla hizmet veriyoruz.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-calendar-check"></i>
+              </div>
+              <h4>Zamanında Teslim</h4>
+              <p>Zamanında teslim ve müşteri odaklı hizmet anlayışımızla çalışıyoruz.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-heart"></i>
+              </div>
+              <h4>Müşteri Memnuniyeti</h4>
+              <p>Müşteri memnuniyetini ön planda tutan anlayışımızla hizmet veriyoruz.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview Section -->
+    <section class="services-overview section light-background">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-8">
+            <h2 class="section-heading">Ev Dekorasyon, Daire Boyama ve Mantolama Hizmetleri</h2>
+            <p class="section-description">1+1'den 4+1'e Profesyonel Çözümler</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="content-section" data-aos="fade-up" data-aos-delay="200">
+              <p class="lead-text">Evlerimiz, yaşam tarzımızın bir yansımasıdır. Zamanla değişen ihtiyaçlar, yıpranan yüzeyler ve yeni trendler; ev dekorasyonunda yeniliği kaçınılmaz kılar.</p>
+              <p class="description-text">İster 1+1 küçük bir daire, ister 4+1 geniş bir aile evi olsun — biz, her ölçekte profesyonel boya, tadilat, mantolama ve yalıtım hizmetleri sunuyoruz.</p>
+              <p class="description-text">Temiz çalışma prensibi, garantili işçilik ve zamanında teslim politikamızla, yaşam alanlarınıza konfor ve estetik kazandırıyoruz.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Service Section -->
+    <section class="professional-service section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-8">
+            <h2 class="section-heading">Profesyonel, Garantili ve Zamanında Teslim Hizmet</h2>
+            <p class="section-description">Tüm çalışmalarımızda üç temel ilkemiz vardır</p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="principle-card">
+              <div class="principle-icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <h4>Profesyonel Ekip</h4>
+              <p>Deneyimli ustalar ve mühendis kontrolü ile her projede profesyonel ekip çalışması sağlıyoruz.</p>
+            </div>
+          </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="principle-card">
+              <div class="principle-icon">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h4>Garantili İşçilik</h4>
+              <p>Her işlem sözleşme ile güvence altına alınır ve garantili işçilik anlayışımızla hizmet veriyoruz.</p>
+            </div>
+          </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="principle-card">
+              <div class="principle-icon">
+                <i class="bi bi-broom"></i>
+        </div>
+              <h4>Temiz Çalışma</h4>
+              <p>Eşyalarınız korunur, iş bitiminde ortam tertemiz teslim edilir ve temiz çalışma prensibi uygulanır.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-lg-12 text-center" data-aos="fade-up" data-aos-delay="500">
+            <div class="final-message">
+              <h3>Gezgin Ustalar – Tecrübe, güven ve kaliteli hizmetin birleştiği adres.</h3>
+              <p>Her projede; kaliteli malzeme, deneyimli ekip ve titiz işçilik ile evinizi yenilemenin en kolay ve güvenli yoluyuz.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container">
+      <div class="row gy-5">
+
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <a href="index.html" class="logo d-flex align-items-center mb-3">
+              <span class="sitename">Gezgin Ustalar</span>
+            </a>
+            <p class="tagline">Ustalar yolda, çözüm kapında! Hızlı hizmet, garantili işçilik, uygun fiyat.</p>
+
+            <div class="social-links mt-4">
+              <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" aria-label="Dribbble"><i class="bi bi-dribbble"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="footer-links-grid">
+            <div class="row">
+              <div class="col-6 col-md-4">
+                <h5>Sayfalar</h5>
+                <ul class="list-unstyled">
+                  <li><a href="index.html">Ana Sayfa</a></li>
+                  <li><a href="about.html">Hakkımızda</a></li>
+                  <li><a href="services.html">Hizmetler</a></li>
+                  <li><a href="gallery.html">Galeri</a></li>
+                  <li><a href="contact.html">İletişim</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-4">
+                <h5>Hizmetlerimiz</h5>
+                <ul class="list-unstyled">
+                  <li><a href="service-1.html">Dış Cephe İşleri ve Mantolama Uygulama Ve Tadilatları</a></li>
+                  <li><a href="service-2.html">Daire İçi ve Villa Tadilatı Hizmetleri</a></li>
+                  <li><a href="service-6.html">Zemin Kaplama Uygulamaları</a></li>
+                  <li><a href="service-5.html">Asansör İçi Kırım ve Boya Uygulamaları</a></li>
+                  <li><a href="service-3.html">İzolasyon Ve Yalıtım Hizmetleri</a></li>
+                  <li><a href="service-4.html">Karot Delme ve Kesme, Kırım Ve Filiz Ekme İşleri</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-4">
+                <h5>İletişim</h5>
+                <ul class="list-unstyled">
+                  <li><a href="contact.html">İletişim</a></li>
+                  <li><a href="https://wa.me/905065636879?text=Merhaba%2C%20Bilgi%20ve%20teklif%20almak%20istiyorum." target="_blank">WhatsApp</a></li>
+                  <li><a href="tel:+905065636879">+90 506 563 68 79</a></li>
+                  <li><a href="mailto:gezginustalar@gmail.com">gezginustalar@gmail.com</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2">
+          <div class="footer-cta">
+            <h5>İletişime Geçelim</h5>
+            <a href="contact.html" class="btn btn-outline">İletişime Geç</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="footer-bottom-content">
+              <p class="mb-0">Bu site <a href="https://angraweb.com/" target="_blank">angraweb.com</a> tarafından oluşturulmuştur.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/905065636879?text=Merhaba%2C%20Bilgi%20ve%20teklif%20almak%20istiyorum." class="whatsapp-float" target="_blank" aria-label="WhatsApp ile Usta ">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Call Floating Button -->
+  <a href="tel:+905065636879" class="call-float" aria-label="Usta Çağır">
+    <i class="bi bi-telephone-fill"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
